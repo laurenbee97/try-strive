@@ -103,51 +103,6 @@
     }
     .nav-cta:hover { background: var(--gradient-cta-hover); box-shadow: var(--shadow-button); }
 
-    /* DROPDOWN */
-    .nav-dropdown { position: relative; }
-    .nav-dropdown > a {
-      display: flex;
-      align-items: center;
-      gap: 5px;
-    }
-    .nav-dropdown > a::after {
-      content: '▾';
-      font-size: 11px;
-      opacity: 0.6;
-      transition: transform 0.2s;
-      display: inline-block;
-    }
-    .nav-dropdown:hover > a::after { transform: rotate(-180deg); }
-    .dropdown-menu {
-      display: none;
-      position: absolute;
-      top: calc(100% + 12px);
-      left: 50%;
-      transform: translateX(-50%);
-      background: white;
-      border: 1px solid rgba(15, 21, 116, 0.08);
-      border-radius: 12px;
-      box-shadow: 0px 8px 30px rgba(15, 21, 116, 0.12);
-      min-width: 260px;
-      padding: 8px;
-      z-index: 200;
-      list-style: none;
-    }
-    .nav-dropdown:hover .dropdown-menu { display: block; }
-    .dropdown-menu li a {
-      display: block;
-      padding: 10px 16px;
-      border-radius: 8px;
-      font-size: 14px;
-      font-weight: 500;
-      color: var(--text-dark);
-      transition: background 0.15s, color 0.15s;
-    }
-    .dropdown-menu li a:hover {
-      background: var(--bg-purple-tint);
-      color: var(--accent-purple);
-    }
-
     /* HERO */
     .hero {
       background: var(--gradient-navy);
@@ -777,13 +732,8 @@
     <div class="nav-inner">
       <a href="https://strivemath.com" class="nav-logo">Strive<span>.</span></a>
       <ul class="nav-links">
-        <li class="nav-dropdown">
-          <a href="#">Courses</a>
-          <ul class="dropdown-menu">
-            <li><a href="math-classes.html">Mathematics</a></li>
-            <li><a href="ai-first-coding.html">AI-First Software Development</a></li>
-          </ul>
-        </li>
+        <li><a href="math-classes.html">Mathematics</a></li>
+        <li><a href="ai-first-coding.html">AI-First Software Development</a></li>
       </ul>
       <a href="#trial" class="nav-cta">Book a Free Trial</a>
     </div>
