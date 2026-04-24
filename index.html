@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Courses — Strive</title>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --primary: #0F1574;
+      --primary-light: #878AB9;
+      --accent-purple: #7058FF;
+      --accent-pink: #FF4F84;
+      --accent-orange: #FFA41C;
+      --accent-green: #B0EB33;
+      --accent-blue: #2C81ED;
+      --text-dark: #575863;
+      --text-muted: #B1B1C2;
+      --bg-purple-tint: #f1eeff;
+      --bg-subtle: #f3f3f8;
+      --gradient-cta: linear-gradient(to right, #FFA41C, #FF4F84, #7058FF);
+      --gradient-cta-hover: linear-gradient(to right, #FFA41C, #FF4F84, #7058FF, #2C81ED, #B0EB33);
+      --gradient-navy: linear-gradient(315deg, #134297 0%, #0F3C8E 20%, #0B3785 40%, #07317C 60%, #032B74 80%, #00266b 100%);
+      --shadow-card: 0px 8px 30.26px rgba(15, 21, 116, 0.07);
+      --shadow-button: 0px 4px 11px rgba(0, 0, 0, 0.31);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Jost', sans-serif;
+      color: var(--primary);
+      background: #ffffff;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #ffffffbb;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(15, 21, 116, 0.08);
+      padding: 0 24px;
+    }
+    .nav-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+    }
+    .nav-logo {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
+      letter-spacing: -0.01em;
+    }
+    .nav-logo span {
+      background: var(--gradient-cta);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--text-dark);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--accent-purple); }
+    .nav-cta {
+      background: var(--gradient-cta);
+      color: white;
+      border: none;
+      border-radius: 100px;
+      padding: 10px 24px;
+      font-family: 'Jost', sans-serif;
+      font-weight: 600;
+      font-size: 15px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: 200ms;
+      display: inline-block;
+    }
+    .nav-cta:hover { background: var(--gradient-cta-hover); box-shadow: var(--shadow-button); }
+
+    /* DROPDOWN */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown > a {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .nav-dropdown > a::after {
+      content: '▾';
+      font-size: 11px;
+      opacity: 0.6;
+      transition: transform 0.2s;
+      display: inline-block;
+    }
+    .nav-dropdown:hover > a::after { transform: rotate(-180deg); }
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: calc(100% + 12px);
+      left: 50%;
+      transform: translateX(-50%);
+      background: white;
+      border: 1px solid rgba(15, 21, 116, 0.08);
+      border-radius: 12px;
+      box-shadow: 0px 8px 30px rgba(15, 21, 116, 0.12);
+      min-width: 260px;
+      padding: 8px;
+      z-index: 200;
+      list-style: none;
+    }
+    .nav-dropdown:hover .dropdown-menu { display: block; }
+    .dropdown-menu li a {
+      display: block;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-dark);
+      transition: background 0.15s, color 0.15s;
+    }
+    .dropdown-menu li a:hover {
+      background: var(--bg-purple-tint);
+      color: var(--accent-purple);
+    }
+
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+    }
+
+    /* HERO */
+    .hero {
+      background: var(--gradient-navy);
+      padding: 80px 24px 72px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 0%, rgba(112, 88, 255, 0.25) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .hero-inner { position: relative; max-width: 680px; margin: 0 auto; }
+    .hero-tag {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.12);
+      color: #ffffffcc;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border-radius: 100px;
+      padding: 6px 18px;
+      margin-bottom: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+    .hero h1 {
+      font-size: clamp(32px, 5vw, 56px);
+      font-weight: 700;
+      color: white;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+    .hero p {
+      font-size: 18px;
+      color: rgba(255,255,255,0.72);
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    /* COURSES GRID */
+    .courses-section {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 72px 24px 96px;
+      flex: 1;
+    }
+    .section-label {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+    }
+    .courses-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+      gap: 20px;
+    }
+    .course-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 28px 32px;
+      border-radius: 16px;
+      border: 1px solid rgba(15, 21, 116, 0.08);
+      box-shadow: var(--shadow-card);
+      text-decoration: none;
+      transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
+      background: white;
+    }
+    .course-card:hover {
+      box-shadow: 0px 16px 40px rgba(15, 21, 116, 0.12);
+      transform: translateY(-2px);
+      border-color: rgba(112, 88, 255, 0.2);
+    }
+    .course-card.coming-soon {
+      opacity: 0.55;
+      cursor: default;
+      pointer-events: none;
+    }
+    .course-card-left { display: flex; flex-direction: column; gap: 6px; }
+    .course-icon {
+      font-size: 28px;
+      margin-bottom: 4px;
+    }
+    .course-title {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .course-subtitle {
+      font-size: 14px;
+      color: var(--text-dark);
+    }
+    .course-badge {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 100px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .badge-live {
+      background: var(--bg-purple-tint);
+      color: var(--accent-purple);
+    }
+    .badge-soon {
+      background: var(--bg-subtle);
+      color: var(--text-muted);
+    }
+    .course-arrow {
+      font-size: 18px;
+      color: var(--accent-purple);
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 600px) {
+      .courses-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="https://strivemath.com" class="nav-logo">Strive<span>.</span></a>
+      <ul class="nav-links">
+        <li class="nav-dropdown">
+          <a href="#">Courses</a>
+          <ul class="dropdown-menu">
+            <li><a href="math-classes.html">Mathematics</a></li>
+            <li><a href="ai-first-coding.html">AI-First Software Development</a></li>
+          </ul>
+        </li>
+      </ul>
+      <a href="math-classes.html#trial" class="nav-cta">Book a Free Trial</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-tag">Our Courses</div>
+      <h1>Learn something extraordinary</h1>
+      <p>Expert-led, 1-on-1 classes designed for ambitious kids and teens.</p>
+    </div>
+  </section>
+
+  <section class="courses-section">
+    <p class="section-label">Available now & coming soon</p>
+    <div class="courses-grid">
+
+      <a href="math-classes.html" class="course-card">
+        <div class="course-card-left">
+          <div class="course-icon">📐</div>
+          <div class="course-title">Mathematics</div>
+          <div class="course-subtitle">1-on-1 tuition for school &amp; beyond</div>
+        </div>
+        <span class="course-badge badge-live">Live</span>
+      </a>
+
+      <a href="ai-first-coding.html" class="course-card">
+        <div class="course-card-left">
+          <div class="course-icon">💻</div>
+          <div class="course-title">AI-First Software Development</div>
+          <div class="course-subtitle">Build real products with AI tools</div>
+        </div>
+        <span class="course-badge badge-live">Live</span>
+      </a>
+
+      <div class="course-card coming-soon">
+        <div class="course-card-left">
+          <div class="course-icon">🏕️</div>
+          <div class="course-title">Holiday Bootcamps</div>
+          <div class="course-subtitle">Intensive camps during school holidays</div>
+        </div>
+        <span class="course-badge badge-soon">Coming soon</span>
+      </div>
+
+      <div class="course-card coming-soon">
+        <div class="course-card-left">
+          <div class="course-icon">✍️</div>
+          <div class="course-title">Blog</div>
+          <div class="course-subtitle">Tips, guides &amp; learning resources</div>
+        </div>
+        <span class="course-badge badge-soon">Coming soon</span>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>
