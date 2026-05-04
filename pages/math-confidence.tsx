@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import Nav from '@/components/Nav'
 
-const navUrl = 'https://www.strivemath.com/?show_form=true&plan=navbar'
 const trialUrl = 'https://calendly.com/strive-trial-class/try-a-math-class'
 const stripeUrl = 'https://buy.stripe.com/3cIdR899Zg3r3Ay6mG93y1v'
 
@@ -58,20 +58,7 @@ export default function MathConfidence() {
         />
       </Head>
 
-      <nav>
-        <div className="nav-inner">
-          <a href="https://strivemath.com" className="nav-logo">
-            Strive<span>.</span>
-          </a>
-          <ul className="nav-links">
-            <li><a href="https://www.strivemath.com">Coding</a></li>
-            <li><Link href="/math">Mathematics</Link></li>
-            <li><Link href="/ai-first-software-development">AI-First Software Development</Link></li>
-            <li><Link href="/holidaycamps">Holiday Bootcamps</Link></li>
-          </ul>
-          <a href={navUrl} className="nav-cta">Book a Free Trial</a>
-        </div>
-      </nav>
+      <Nav />
 
       <main>
         {/* HERO */}

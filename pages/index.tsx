@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import Nav from '@/components/Nav'
 
 const trialUrl = 'https://www.strivemath.com/?show_form=true&plan=navbar'
 
@@ -23,20 +24,7 @@ export default function CoursesIndex() {
       </Head>
 
       <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
-        <nav>
-          <div className="nav-inner">
-            <a href="https://strivemath.com" className="nav-logo">
-              Strive<span>.</span>
-            </a>
-            <ul className="nav-links">
-              <li><a href="https://www.strivemath.com">Coding</a></li>
-              <li><Link href="/math">Mathematics</Link></li>
-              <li><Link href="/ai-first-software-development">AI-First Software Development</Link></li>
-              <li><Link href="/holidaycamps">Holiday Bootcamps</Link></li>
-            </ul>
-            <a href={trialUrl} className="nav-cta">Book a Free Trial</a>
-          </div>
-        </nav>
+        <Nav />
 
         <main className="courses-section">
           <div>

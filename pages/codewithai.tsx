@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import Nav from '@/components/Nav'
 
 const trialUrl = 'https://www.strivemath.com/?show_form=true&plan=navbar'
 const stripeUrl = 'https://book.stripe.com/eVa5nd4au0CX2mQ14T'
@@ -51,18 +52,7 @@ export default function CodeWithAI() {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       </Head>
 
-      <nav>
-        <div className="nav-inner">
-          <a href="https://strivemath.com" className="nav-logo">Strive<span>.</span></a>
-          <ul className="nav-links">
-            <li><a href="https://www.strivemath.com">Coding</a></li>
-            <li><Link href="/math">Mathematics</Link></li>
-            <li><Link href="/ai-first-software-development">AI-First Software Development</Link></li>
-            <li><Link href="/holidaycamps">Holiday Bootcamps</Link></li>
-          </ul>
-          <a href={trialUrl} className="nav-cta">Book a Free Trial</a>
-        </div>
-      </nav>
+      <Nav />
 
       <main>
         {/* HERO */}

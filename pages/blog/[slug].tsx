@@ -1,6 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
+import Nav from '@/components/Nav'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import fs from 'fs'
 import path from 'path'
@@ -96,20 +97,7 @@ export default function BlogPost({ source, frontmatter, slug }: BlogPostProps) {
         />
       </Head>
 
-      <nav>
-        <div className="nav-inner">
-          <a href="https://strivemath.com" className="nav-logo">
-            Strive<span>.</span>
-          </a>
-          <ul className="nav-links">
-            <li><a href="https://www.strivemath.com">Coding</a></li>
-            <li><Link href="/math">Mathematics</Link></li>
-            <li><Link href="/ai-first-software-development">AI-First Software Development</Link></li>
-            <li><Link href="/holidaycamps">Holiday Bootcamps</Link></li>
-          </ul>
-          <a href={trialUrl} className="nav-cta">Book a Free Trial</a>
-        </div>
-      </nav>
+      <Nav />
 
       <main className="blog-post-layout">
         <article className="blog-prose">
