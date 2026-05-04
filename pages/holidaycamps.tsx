@@ -68,18 +68,18 @@ export default function HolidayCamps() {
 
       <main>
         {/* HERO */}
-        <header className="hero">
+        <header className="hero hero-bootcamp">
           <div className="hero-tag">8 Classes · Ages 8–16 · Online</div>
           <h1>
             Holiday<br />
             <span className="gradient-text">Bootcamps</span>
           </h1>
           <p className="hero-sub">
-            Intensive online bootcamps that fit around your holiday plans — not the other way around. Choose Math or Coding and let your child build something real.
+            Intensive online bootcamps that fit around your holiday plans, not the other way around. Choose Math or Coding and let your child build something real.
           </p>
           <div className="hero-actions">
             <a href={trialUrl} className="btn-primary">Book Now</a>
-            <a href="#how-scheduling-works" className="btn-outline-white">How It Works</a>
+            <a href="#how-scheduling-works" className="btn-outline-dark">How It Works</a>
           </div>
           <div className="hero-stats">
             <div className="hero-stat">
@@ -108,42 +108,46 @@ export default function HolidayCamps() {
             <h2 className="section-title">Math Bootcamps</h2>
             <p className="bootcamp-section-sub">Choose the track that matches your child&apos;s goals and learning style</p>
             <div className="bootcamp-grid bootcamp-grid-2">
-              <article className="bootcamp-card">
-                <div className="bootcamp-card-header bh-math-confidence">
-                  <span className="bootcamp-card-header-icon">📐</span>
-                  <p className="bootcamp-card-header-name">Math Confidence</p>
-                  <span className="bootcamp-card-header-tag">Mathematics</span>
-                </div>
-                <div className="bootcamp-card-body">
-                  <h3>Math Confidence</h3>
-                  <p className="bootcamp-card-tagline">Patient 1:1 coaching that makes math finally make sense</p>
-                  <div className="bootcamp-card-meta">
-                    <span className="bootcamp-meta-chip">👥 Ages 8–16</span>
-                    <span className="bootcamp-meta-chip">⏱ 8 Hours</span>
-                    <span className="bootcamp-meta-chip">🌐 Fully Online</span>
-                    <span className="bootcamp-meta-chip">💰 SGD 640</span>
+              <Link href="/math-confidence" style={{ display: 'block', textDecoration: 'none', color: 'inherit' }}>
+                <article className="bootcamp-card">
+                  <div className="bootcamp-card-header bh-math-confidence">
+                    <span className="bootcamp-card-header-icon">📐</span>
+                    <p className="bootcamp-card-header-name">Math Confidence</p>
+                    <span className="bootcamp-card-header-tag">Mathematics</span>
                   </div>
-                  <p className="bootcamp-curriculum">Lessons and content brought to you by a team from NUS and Stanford University</p>
-                </div>
-              </article>
-              <article className="bootcamp-card">
-                <div className="bootcamp-card-header bh-math-performance">
-                  <span className="bootcamp-card-header-icon">🏆</span>
-                  <p className="bootcamp-card-header-name">Math Performance</p>
-                  <span className="bootcamp-card-header-tag">Mathematics</span>
-                </div>
-                <div className="bootcamp-card-body">
-                  <h3>Math Performance</h3>
-                  <p className="bootcamp-card-tagline">8 hours of elite math coaching</p>
-                  <div className="bootcamp-card-meta">
-                    <span className="bootcamp-meta-chip">👥 Ages 8–16</span>
-                    <span className="bootcamp-meta-chip">⏱ 8 Hours</span>
-                    <span className="bootcamp-meta-chip">🌐 Fully Online</span>
-                    <span className="bootcamp-meta-chip">💰 SGD 640</span>
+                  <div className="bootcamp-card-body">
+                    <h3>Math Confidence</h3>
+                    <p className="bootcamp-card-tagline">Patient 1:1 coaching that makes math finally make sense</p>
+                    <div className="bootcamp-card-meta">
+                      <span className="bootcamp-meta-chip">👥 Ages 8–16</span>
+                      <span className="bootcamp-meta-chip">⏱ 8 Hours</span>
+                      <span className="bootcamp-meta-chip">🌐 Fully Online</span>
+                      <span className="bootcamp-meta-chip">💰 SGD 640</span>
+                    </div>
+                    <p className="bootcamp-curriculum">Lessons and content brought to you by a team from NUS and Stanford University</p>
                   </div>
-                  <p className="bootcamp-curriculum">Lessons and content brought to you by a team from NUS and Stanford University</p>
-                </div>
-              </article>
+                </article>
+              </Link>
+              <Link href="/math-performance" style={{ display: 'block', textDecoration: 'none', color: 'inherit' }}>
+                <article className="bootcamp-card">
+                  <div className="bootcamp-card-header bh-math-performance">
+                    <span className="bootcamp-card-header-icon">🏆</span>
+                    <p className="bootcamp-card-header-name">Math Performance</p>
+                    <span className="bootcamp-card-header-tag">Mathematics</span>
+                  </div>
+                  <div className="bootcamp-card-body">
+                    <h3>Math Performance</h3>
+                    <p className="bootcamp-card-tagline">8 hours of elite math coaching</p>
+                    <div className="bootcamp-card-meta">
+                      <span className="bootcamp-meta-chip">👥 Ages 8–16</span>
+                      <span className="bootcamp-meta-chip">⏱ 8 Hours</span>
+                      <span className="bootcamp-meta-chip">🌐 Fully Online</span>
+                      <span className="bootcamp-meta-chip">💰 SGD 640</span>
+                    </div>
+                    <p className="bootcamp-curriculum">Lessons and content brought to you by a team from NUS and Stanford University</p>
+                  </div>
+                </article>
+              </Link>
             </div>
           </div>
         </section>
@@ -154,61 +158,67 @@ export default function HolidayCamps() {
             <h2 className="section-title">Coding Bootcamps</h2>
             <p className="bootcamp-section-sub">Build real projects and develop in-demand programming skills</p>
             <div className="bootcamp-grid bootcamp-grid-3">
-              <article className="bootcamp-card">
-                <div className="bootcamp-card-header bh-ai-intro">
-                  <span className="bootcamp-card-header-icon">🤖</span>
-                  <p className="bootcamp-card-header-name">Using AI to Code</p>
-                  <span className="bootcamp-card-header-tag">AI Coding · Intro</span>
-                </div>
-                <div className="bootcamp-card-body">
-                  <h3>Using AI to Code</h3>
-                  <p className="bootcamp-card-tagline">An intro to coding using the power of AI tools</p>
-                  <div className="bootcamp-card-meta">
-                    <span className="bootcamp-meta-chip">👥 Ages 10–16</span>
-                    <span className="bootcamp-meta-chip">⏱ 8 Hours</span>
-                    <span className="bootcamp-meta-chip">🌐 Fully Online</span>
-                    <span className="bootcamp-meta-chip">💰 SGD 680</span>
+              <Link href="/codewithai" style={{ display: 'block', textDecoration: 'none', color: 'inherit' }}>
+                <article className="bootcamp-card">
+                  <div className="bootcamp-card-header bh-ai-intro">
+                    <span className="bootcamp-card-header-icon">🤖</span>
+                    <p className="bootcamp-card-header-name">Using AI to Code</p>
+                    <span className="bootcamp-card-header-tag">AI Coding · Intro</span>
                   </div>
-                  <p className="bootcamp-curriculum">Lessons and content brought to you by a team from NUS and Stanford University</p>
-                </div>
-              </article>
-              <article className="bootcamp-card">
-                <div className="bootcamp-card-header bh-python">
-                  <span className="bootcamp-popular-badge">Most Popular</span>
-                  <span className="bootcamp-card-header-icon">🎮</span>
-                  <p className="bootcamp-card-header-name">App + Game Dev</p>
-                  <span className="bootcamp-card-header-tag">Coding · Python</span>
-                </div>
-                <div className="bootcamp-card-body">
-                  <h3>App + Game Dev in Python</h3>
-                  <p className="bootcamp-card-tagline">Build real apps and games using Python from scratch</p>
-                  <div className="bootcamp-card-meta">
-                    <span className="bootcamp-meta-chip">👥 Ages 8–16</span>
-                    <span className="bootcamp-meta-chip">⏱ 8 Hours</span>
-                    <span className="bootcamp-meta-chip">🌐 Fully Online</span>
-                    <span className="bootcamp-meta-chip">💰 SGD 680</span>
+                  <div className="bootcamp-card-body">
+                    <h3>Using AI to Code</h3>
+                    <p className="bootcamp-card-tagline">An intro to coding using the power of AI tools</p>
+                    <div className="bootcamp-card-meta">
+                      <span className="bootcamp-meta-chip">👥 Ages 10–16</span>
+                      <span className="bootcamp-meta-chip">⏱ 8 Hours</span>
+                      <span className="bootcamp-meta-chip">🌐 Fully Online</span>
+                      <span className="bootcamp-meta-chip">💰 SGD 680</span>
+                    </div>
+                    <p className="bootcamp-curriculum">Lessons and content brought to you by a team from NUS and Stanford University</p>
                   </div>
-                  <p className="bootcamp-curriculum">Lessons and content brought to you by a team from NUS and Stanford University</p>
-                </div>
-              </article>
-              <article className="bootcamp-card">
-                <div className="bootcamp-card-header bh-ai-advanced">
-                  <span className="bootcamp-card-header-icon">🚀</span>
-                  <p className="bootcamp-card-header-name">AI Web Development</p>
-                  <span className="bootcamp-card-header-tag">AI Coding · Advanced</span>
-                </div>
-                <div className="bootcamp-card-body">
-                  <h3>AI Web Development (Advanced)</h3>
-                  <p className="bootcamp-card-tagline">Build and deploy full-stack web apps using AI-first development</p>
-                  <div className="bootcamp-card-meta">
-                    <span className="bootcamp-meta-chip">👥 Ages 13–18</span>
-                    <span className="bootcamp-meta-chip">⏱ 8 Hours</span>
-                    <span className="bootcamp-meta-chip">🌐 Fully Online</span>
-                    <span className="bootcamp-meta-chip">💰 SGD 680</span>
+                </article>
+              </Link>
+              <Link href="/makepythonapps" style={{ display: 'block', textDecoration: 'none', color: 'inherit' }}>
+                <article className="bootcamp-card">
+                  <div className="bootcamp-card-header bh-python">
+                    <span className="bootcamp-popular-badge">Most Popular</span>
+                    <span className="bootcamp-card-header-icon">🎮</span>
+                    <p className="bootcamp-card-header-name">App + Game Dev</p>
+                    <span className="bootcamp-card-header-tag">Coding · Python</span>
                   </div>
-                  <p className="bootcamp-curriculum">Lessons and content brought to you by a team from NUS and Stanford University</p>
-                </div>
-              </article>
+                  <div className="bootcamp-card-body">
+                    <h3>App + Game Dev in Python</h3>
+                    <p className="bootcamp-card-tagline">Build real apps and games using Python from scratch</p>
+                    <div className="bootcamp-card-meta">
+                      <span className="bootcamp-meta-chip">👥 Ages 8–16</span>
+                      <span className="bootcamp-meta-chip">⏱ 8 Hours</span>
+                      <span className="bootcamp-meta-chip">🌐 Fully Online</span>
+                      <span className="bootcamp-meta-chip">💰 SGD 680</span>
+                    </div>
+                    <p className="bootcamp-curriculum">Lessons and content brought to you by a team from NUS and Stanford University</p>
+                  </div>
+                </article>
+              </Link>
+              <Link href="/ai-first-coding-bootcamp" style={{ display: 'block', textDecoration: 'none', color: 'inherit' }}>
+                <article className="bootcamp-card">
+                  <div className="bootcamp-card-header bh-ai-advanced">
+                    <span className="bootcamp-card-header-icon">🚀</span>
+                    <p className="bootcamp-card-header-name">AI Web Development</p>
+                    <span className="bootcamp-card-header-tag">AI Coding · Advanced</span>
+                  </div>
+                  <div className="bootcamp-card-body">
+                    <h3>AI Web Development (Advanced)</h3>
+                    <p className="bootcamp-card-tagline">Build and deploy full-stack web apps using AI-first development</p>
+                    <div className="bootcamp-card-meta">
+                      <span className="bootcamp-meta-chip">👥 Ages 13–18</span>
+                      <span className="bootcamp-meta-chip">⏱ 8 Hours</span>
+                      <span className="bootcamp-meta-chip">🌐 Fully Online</span>
+                      <span className="bootcamp-meta-chip">💰 SGD 680</span>
+                    </div>
+                    <p className="bootcamp-curriculum">Lessons and content brought to you by a team from NUS and Stanford University</p>
+                  </div>
+                </article>
+              </Link>
             </div>
           </div>
         </section>

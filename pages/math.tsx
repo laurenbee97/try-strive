@@ -20,8 +20,9 @@ export default function MathClasses() {
           <ul className="nav-links">
             <li><Link href="/math">Mathematics</Link></li>
             <li><Link href="/ai-first-software-development">AI-First Software Development</Link></li>
+            <li><Link href="/blog">Blog</Link></li>
           </ul>
-          <a href="#trial" className="nav-cta">Book a Free Trial</a>
+          <a href={trialUrl} className="nav-cta">Book a Free Trial</a>
         </div>
       </nav>
 
