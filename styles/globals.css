@@ -1345,6 +1345,92 @@ footer p {
   .outcome-grid { grid-template-columns: 1fr; }
 }
 
+/* ===== PAYMENT SUCCESS ===== */
+.payment-success-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-subtle);
+  padding: 40px 24px;
+  text-align: center;
+}
+.payment-success-logo {
+  margin-bottom: 40px;
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--primary);
+  letter-spacing: -0.5px;
+  text-decoration: none;
+  display: block;
+}
+.payment-success-logo span { color: var(--accent-pink); }
+.payment-success-container {
+  background: white;
+  border-radius: 24px;
+  padding: 56px 48px;
+  max-width: 480px;
+  width: 100%;
+  box-shadow: var(--shadow-card-lg);
+}
+.payment-success-icon {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: var(--gradient-cta);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 32px;
+}
+.payment-success-container h1 {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+.payment-course-name {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+}
+.payment-amount {
+  font-size: 15px;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+.payment-note {
+  font-size: 15px;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* ===== ISA WEBINAR ===== */
+.webinar-past-badge {
+  display: inline-block;
+  background: rgba(176,176,194,0.15);
+  border: 1px solid rgba(176,176,194,0.4);
+  color: var(--text-muted);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 100px;
+  margin-bottom: 24px;
+}
+.webinar-topics { list-style: none; padding: 0; margin: 28px 0 0; text-align: left; max-width: 520px; }
+.webinar-topics li { display: flex; align-items: flex-start; gap: 12px; padding: 12px 0; border-bottom: 1px solid rgba(15,21,116,0.07); font-size: 16px; color: var(--text-dark); line-height: 1.5; }
+.webinar-topics li:last-child { border-bottom: none; }
+.webinar-topics li::before { content: '✓'; color: var(--accent-purple); font-weight: 700; font-size: 14px; flex-shrink: 0; margin-top: 2px; }
+.webinar-speaker-card { display: flex; align-items: center; gap: 20px; background: var(--bg-subtle); border-radius: 16px; padding: 24px 28px; margin-top: 16px; max-width: 520px; }
+.webinar-speaker-avatar { width: 56px; height: 56px; border-radius: 50%; background: var(--gradient-cta); display: flex; align-items: center; justify-content: center; font-size: 22px; font-weight: 800; color: white; flex-shrink: 0; }
+.webinar-speaker-name { font-size: 16px; font-weight: 700; color: var(--primary); margin-bottom: 2px; }
+.webinar-speaker-title { font-size: 13px; color: var(--text-muted); }
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   section { padding: 56px 20px; }
