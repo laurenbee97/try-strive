@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 
-const trialUrl = process.env.NEXT_PUBLIC_TRIAL_URL || '/math#trial'
+const trialUrl = 'https://www.strivemath.com/?show_form=true&plan=navbar'
 
 const sectionHeadingStyle: React.CSSProperties = {
   textAlign: 'center',

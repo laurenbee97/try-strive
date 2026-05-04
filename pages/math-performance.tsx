@@ -1,7 +1,9 @@
 import Head from 'next/head'
 import Link from 'next/link'
 
-const trialUrl = process.env.NEXT_PUBLIC_TRIAL_URL || '/math#trial'
+const navUrl = 'https://www.strivemath.com/?show_form=true&plan=navbar'
+const trialUrl = 'https://calendly.com/strive-trial-class/try-a-math-class'
+const stripeUrl = 'https://buy.stripe.com/3cIdR899Zg3r3Ay6mG93y1v'
 
 const faqs = [
   {
@@ -67,7 +69,7 @@ export default function MathPerformance() {
             <li><Link href="/ai-first-software-development">AI-First Software Development</Link></li>
             <li><Link href="/holidaycamps">Holiday Bootcamps</Link></li>
           </ul>
-          <a href={trialUrl} className="nav-cta">Book a Free Trial</a>
+          <a href={navUrl} className="nav-cta">Book a Free Trial</a>
         </div>
       </nav>
 
@@ -83,7 +85,7 @@ export default function MathPerformance() {
             Elite 1:1 coaching for high-achievers ready to go beyond the school curriculum — with Olympiad techniques, competition prep, and a global diagnostic benchmark.
           </p>
           <div className="hero-actions">
-            <a href={trialUrl} className="btn-primary">Sign Up Now</a>
+            <a href={stripeUrl} className="btn-primary" target="_blank" rel="noopener noreferrer">Sign Up Now</a>
             <a href="#how-it-works" className="btn-outline-dark">How It Works</a>
           </div>
           <div className="hero-stats">
@@ -257,7 +259,7 @@ export default function MathPerformance() {
                   <li>Certificate of completion</li>
                   <li>30-min parent consultation with a Stanford Graduate</li>
                 </ul>
-                <a href={trialUrl} className="btn-primary">Sign Up Now</a>
+                <a href={stripeUrl} className="btn-primary" target="_blank" rel="noopener noreferrer">Sign Up Now</a>
                 <p className="pricing-note">Ages 10+ · Fully online</p>
               </article>
             </div>
@@ -292,7 +294,7 @@ export default function MathPerformance() {
               <li>Comfortable with using a mouse and keyboard</li>
             </ul>
             <div style={{ marginTop: '36px', display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
-              <a href={trialUrl} className="btn-primary">Sign Up Now</a>
+              <a href={stripeUrl} className="btn-primary" target="_blank" rel="noopener noreferrer">Sign Up Now</a>
               <a href={trialUrl} className="btn-outline-dark">Try a Free Math Class</a>
             </div>
             <p style={{ marginTop: '20px', fontSize: '14px', color: 'var(--text-muted)' }}>
@@ -333,7 +335,7 @@ export default function MathPerformance() {
         <section className="cta-section">
           <h2>Students who excel globally don&apos;t take the holidays off.</h2>
           <p>Give your child 8 hours with an expert who understands what high-performers need.</p>
-          <a href={trialUrl} className="btn-primary" style={{ fontSize: '18px', padding: '18px 44px' }}>
+          <a href={stripeUrl} className="btn-primary" style={{ fontSize: '18px', padding: '18px 44px' }} target="_blank" rel="noopener noreferrer">
             Sign Up Now
           </a>
           <p className="cta-note">8 Classes · 1-on-1 · Ages 10+ · Online</p>

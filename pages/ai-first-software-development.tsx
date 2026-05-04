@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 
-const trialUrl = process.env.NEXT_PUBLIC_TRIAL_URL || '#'
+const trialUrl = 'https://www.strivemath.com/?show_form=true&plan=navbar'
 
 export default function AiFirstCoding() {
   return (

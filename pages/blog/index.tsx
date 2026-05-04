@@ -18,7 +18,7 @@ interface BlogIndexProps {
   posts: PostMeta[]
 }
 
-const trialUrl = process.env.NEXT_PUBLIC_TRIAL_URL || '/math#trial'
+const trialUrl = 'https://www.strivemath.com/?show_form=true&plan=navbar'
 
 export default function BlogIndex({ posts }: BlogIndexProps) {
   return (

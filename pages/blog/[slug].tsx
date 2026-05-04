@@ -54,7 +54,7 @@ interface BlogPostProps {
   slug: string
 }
 
-const trialUrl = process.env.NEXT_PUBLIC_TRIAL_URL || '/math#trial'
+const trialUrl = 'https://www.strivemath.com/?show_form=true&plan=navbar'
 
 export default function BlogPost({ source, frontmatter, slug }: BlogPostProps) {
   const publishDate = new Date(frontmatter.date)

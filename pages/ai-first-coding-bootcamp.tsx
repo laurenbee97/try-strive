@@ -1,7 +1,8 @@
 import Head from 'next/head'
 import Link from 'next/link'
 
-const trialUrl = process.env.NEXT_PUBLIC_TRIAL_URL || '/math#trial'
+const trialUrl = 'https://www.strivemath.com/?show_form=true&plan=navbar'
+const stripeUrl = 'https://book.stripe.com/eVa5nd4au0CX2mQ14T'
 
 const faqs = [
   {
@@ -75,7 +76,7 @@ export default function AIFirstCodingBootcamp() {
             Students aged 13–18 master real-world software engineering by collaborating with AI tools — building and deploying full-stack web apps guided by an experienced teacher.
           </p>
           <div className="hero-actions">
-            <a href={trialUrl} className="btn-primary">Sign Up Now</a>
+            <a href={stripeUrl} className="btn-primary" target="_blank" rel="noopener noreferrer">Sign Up Now</a>
             <a href="#curriculum" className="btn-outline-dark">See Curriculum</a>
           </div>
           <div className="hero-stats">
@@ -267,7 +268,7 @@ export default function AIFirstCodingBootcamp() {
               <li>Familiarity with Python coding</li>
             </ul>
             <div style={{ marginTop: '36px', display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
-              <a href={trialUrl} className="btn-primary">Sign Up Now</a>
+              <a href={stripeUrl} className="btn-primary" target="_blank" rel="noopener noreferrer">Sign Up Now</a>
             </div>
             <p style={{ marginTop: '20px', fontSize: '14px', color: 'var(--text-muted)' }}>
               We are here for your questions. <a href="mailto:hello@strivemath.com" style={{ color: 'var(--primary)', textDecoration: 'underline' }}>Contact us</a>
@@ -297,7 +298,7 @@ export default function AIFirstCodingBootcamp() {
         <section className="cta-section">
           <h2>Ready to ship something real?</h2>
           <p>8 flexible 1-on-1 sessions, a deployed full-stack app, and a certificate — for SGD 680.</p>
-          <a href={trialUrl} className="btn-primary" style={{ fontSize: '18px', padding: '18px 44px' }}>Sign Up Now</a>
+          <a href={stripeUrl} className="btn-primary" style={{ fontSize: '18px', padding: '18px 44px' }} target="_blank" rel="noopener noreferrer">Sign Up Now</a>
           <p className="cta-note">8 Classes · 1-on-1 · Ages 13+ · React · Tailwind · Online</p>
         </section>
       </main>

@@ -1,7 +1,8 @@
 import Head from 'next/head'
 import Link from 'next/link'
 
-const trialUrl = process.env.NEXT_PUBLIC_TRIAL_URL || '#'
+const navUrl = 'https://www.strivemath.com/?show_form=true&plan=navbar'
+const trialUrl = 'https://calendly.com/strive-trial-class/try-a-math-class'
 
 export default function MathClasses() {
   return (
@@ -23,7 +24,7 @@ export default function MathClasses() {
             <li><Link href="/ai-first-software-development">AI-First Software Development</Link></li>
             <li><Link href="/holidaycamps">Holiday Bootcamps</Link></li>
           </ul>
-          <a href={trialUrl} className="nav-cta">Book a Free Trial</a>
+          <a href={navUrl} className="nav-cta">Book a Free Trial</a>
         </div>
       </nav>
 
@@ -39,7 +40,7 @@ export default function MathClasses() {
             1-on-1 live classes that move at your child&apos;s pace, follow their school&apos;s curriculum, and build a real love for maths.
           </p>
           <div className="hero-actions">
-            <a href="#trial" className="btn-primary">Book a Free Trial</a>
+            <a href={trialUrl} className="btn-primary">Book a Free Trial</a>
             <a href="#how-it-works" className="btn-outline-white">How It Works</a>
           </div>
           <div className="hero-stats">
@@ -218,7 +219,7 @@ export default function MathClasses() {
                 <p className="pricing-amount"><span className="pricing-currency">SGD </span>320</p>
                 <span className="pricing-per">per month · SGD 80/hr</span>
                 <p className="pricing-detail">One session a week. Good for families who want a steady rhythm without overcommitting.</p>
-                <a href="#trial" className="btn-outline-dark">Get started</a>
+                <a href={trialUrl} className="btn-outline-dark">Get started</a>
                 <p className="pricing-note">Auto-renews monthly</p>
               </article>
               <article className="pricing-card featured">
@@ -226,7 +227,7 @@ export default function MathClasses() {
                 <p className="pricing-amount"><span className="pricing-currency">SGD </span>640</p>
                 <span className="pricing-per">per month · SGD 80/hr</span>
                 <p className="pricing-detail">Two sessions a week. Better for kids who need to move faster — catching up or pushing ahead.</p>
-                <a href="#trial" className="btn-primary">Get started</a>
+                <a href={trialUrl} className="btn-primary">Get started</a>
                 <p className="pricing-note">Auto-renews monthly</p>
               </article>
             </div>
