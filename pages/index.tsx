@@ -3,6 +3,16 @@ import Link from 'next/link'
 
 const trialUrl = process.env.NEXT_PUBLIC_TRIAL_URL || '/math#trial'
 
+const sectionHeadingStyle: React.CSSProperties = {
+  textAlign: 'center',
+  fontSize: '13px',
+  fontWeight: 700,
+  letterSpacing: '0.1em',
+  textTransform: 'uppercase',
+  color: 'var(--accent-purple)',
+  marginBottom: '28px',
+}
+
 export default function CoursesIndex() {
   return (
     <>
@@ -21,26 +31,25 @@ export default function CoursesIndex() {
             <ul className="nav-links">
               <li><Link href="/math">Mathematics</Link></li>
               <li><Link href="/ai-first-software-development">AI-First Software Development</Link></li>
+              <li><Link href="/blog">Blog</Link></li>
             </ul>
             <a href={trialUrl} className="nav-cta">Book a Free Trial</a>
           </div>
         </nav>
 
-        {/* main is the flex:1 element that vertically centres the grid */}
         <main className="courses-section">
           <div>
-            <h1 style={{
-              textAlign: 'center',
-              fontSize: '13px',
-              fontWeight: 700,
-              letterSpacing: '0.1em',
-              textTransform: 'uppercase',
-              color: 'var(--accent-purple)',
-              marginBottom: '28px',
-            }}>
-              Our Courses
-            </h1>
+            <h1 style={sectionHeadingStyle}>Our Courses</h1>
             <div className="courses-grid">
+              <a href="https://www.strivemath.com/" target="_blank" rel="noopener noreferrer" className="course-card">
+                <div className="course-card-left">
+                  <div className="course-icon">🧑‍💻</div>
+                  <h2 className="course-title">Coding</h2>
+                  <p className="course-subtitle">Code real projects with JavaScript, Python &amp; AI</p>
+                </div>
+                <span className="course-badge badge-live">Live</span>
+              </a>
+
               <Link href="/math" className="course-card">
                 <div className="course-card-left">
                   <div className="course-icon">📐</div>
@@ -59,23 +68,26 @@ export default function CoursesIndex() {
                 <span className="course-badge badge-live">Live</span>
               </Link>
 
-              <div className="course-card coming-soon">
+              <Link href="/holidaycamps" className="course-card">
                 <div className="course-card-left">
                   <div className="course-icon">🏕️</div>
                   <h2 className="course-title">Holiday Bootcamps</h2>
                   <p className="course-subtitle">Intensive camps during school holidays</p>
                 </div>
-                <span className="course-badge badge-soon">Coming soon</span>
-              </div>
+                <span className="course-badge badge-live">Live</span>
+              </Link>
+            </div>
 
-              <div className="course-card coming-soon">
+            <h2 style={{ ...sectionHeadingStyle, marginTop: '48px' }}>Everything Else</h2>
+            <div className="courses-grid">
+              <Link href="/blog" className="course-card" style={{ gridColumn: '1 / -1' }}>
                 <div className="course-card-left">
                   <div className="course-icon">✍️</div>
                   <h2 className="course-title">Blog</h2>
                   <p className="course-subtitle">Tips, guides &amp; learning resources</p>
                 </div>
-                <span className="course-badge badge-soon">Coming soon</span>
-              </div>
+                <span className="course-badge badge-live">Live</span>
+              </Link>
             </div>
           </div>
         </main>

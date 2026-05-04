@@ -1014,6 +1014,155 @@ footer p {
 .badge-soon { background: var(--bg-subtle); color: var(--text-muted); }
 .course-arrow { font-size: 18px; color: var(--accent-purple); flex-shrink: 0; }
 
+/* ===== HOLIDAY BOOTCAMPS ===== */
+.bootcamp-section-sub {
+  font-size: 15px;
+  color: var(--text-dark);
+  margin-top: 10px;
+  line-height: 1.55;
+  max-width: 560px;
+}
+.bootcamp-grid {
+  display: grid;
+  gap: 24px;
+  margin-top: 40px;
+}
+.bootcamp-grid-2 { grid-template-columns: repeat(2, 1fr); }
+.bootcamp-grid-3 { grid-template-columns: repeat(3, 1fr); }
+.bootcamp-card {
+  border-radius: 20px;
+  border: 1px solid rgba(15, 21, 116, 0.08);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  background: white;
+  transition: 0.2s all;
+  position: relative;
+}
+.bootcamp-card:hover { box-shadow: var(--shadow-card-lg); transform: translateY(-2px); }
+.bootcamp-card-header {
+  padding: 32px 28px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  position: relative;
+  overflow: hidden;
+  height: 210px;
+}
+.bootcamp-card-header::after {
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.07);
+  right: -50px;
+  bottom: -70px;
+  pointer-events: none;
+}
+.bootcamp-card-header-icon {
+  font-size: 44px;
+  line-height: 1;
+}
+.bootcamp-card-header-name {
+  font-size: clamp(18px, 2.2vw, 24px);
+  font-weight: 700;
+  color: white;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  flex: 1;
+}
+.bootcamp-card-header-tag {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 100px;
+  padding: 4px 12px;
+}
+/* Per-bootcamp gradient variants — all distinct */
+.bh-math-confidence  { background: linear-gradient(135deg, #7058FF 0%, #B0EB33 100%); }
+.bh-math-performance { background: linear-gradient(135deg, #00266b 0%, #2C81ED 100%); }
+.bh-ai-intro         { background: linear-gradient(135deg, #FFA41C 0%, #FF6635 100%); }
+.bh-python           { background: linear-gradient(135deg, #FF4F84 0%, #7058FF 100%); }
+.bh-ai-advanced      { background: linear-gradient(135deg, #FF6635 0%, #0F1574 100%); }
+
+.bootcamp-popular-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 100px;
+}
+.bootcamp-card-body {
+  padding: 20px 24px 24px;
+}
+.bootcamp-card-body h3 {
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 4px;
+}
+.bootcamp-card-tagline {
+  font-size: 14px;
+  color: var(--text-dark);
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+.bootcamp-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+.bootcamp-meta-chip {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--primary);
+  background: var(--bg-subtle);
+  border-radius: 100px;
+  padding: 4px 12px;
+}
+.bootcamp-curriculum {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.scheduling-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 40px;
+}
+.scheduling-card {
+  background: var(--bg-subtle);
+  border-radius: 20px;
+  padding: 32px;
+}
+.scheduling-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+.scheduling-card p {
+  font-size: 15px;
+  color: var(--text-dark);
+  line-height: 1.65;
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   section { padding: 56px 20px; }
@@ -1029,6 +1178,9 @@ footer p {
   .units-grid { grid-template-columns: 1fr; }
   .unit-7 { grid-column: auto; }
   .curriculum-intro { flex-direction: column; align-items: flex-start; }
+  .bootcamp-grid-2 { grid-template-columns: 1fr; }
+  .bootcamp-grid-3 { grid-template-columns: 1fr; }
+  .scheduling-cards { grid-template-columns: 1fr; }
   .spotlight-card {
     grid-template-columns: 1fr;
     padding: 36px 28px;
