@@ -867,6 +867,120 @@ footer p {
 .pricing-card.featured .track-list li { color: rgba(255,255,255,0.85); }
 .pricing-card.featured .track-list li::before { background: rgba(255,255,255,0.45); }
 
+/* ===== MATH — Report Card Image ===== */
+.report-card-img {
+  max-width: 100%;
+  border-radius: 20px;
+  box-shadow: var(--shadow-card-lg);
+  display: block;
+  margin: 0 auto;
+}
+
+/* ===== MATH — Grade Increase Chart ===== */
+.grade-chart-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+.grade-bars-row {
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+  height: 240px;
+}
+.grade-bar-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  gap: 8px;
+}
+.grade-bar {
+  flex: 1;
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-width: 42px;
+}
+.grade-bar-pass {
+  background: var(--accent-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--primary);
+  overflow: hidden;
+}
+.grade-bar-fail {
+  background: linear-gradient(to bottom, var(--accent-purple), var(--accent-pink));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 12px;
+  color: white;
+  overflow: hidden;
+}
+.grade-bar-year {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-align: center;
+  flex-shrink: 0;
+}
+.grade-chart-caption {
+  font-size: 12px;
+  color: var(--text-muted);
+  text-align: center;
+  margin-top: 20px;
+  line-height: 1.55;
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===== MATH — How It Works Steps ===== */
+.how-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+.how-step {
+  background: var(--bg-subtle);
+  border-radius: 20px;
+  padding: 28px 24px;
+  text-align: center;
+}
+.how-step-num {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--gradient-cta);
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+.how-step h3 {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+.how-step p {
+  font-size: 14px;
+  color: var(--text-dark);
+  line-height: 1.65;
+}
+
 /* ===== AI CODING — Fit check ===== */
 .fit-grid {
   display: grid;
@@ -1514,6 +1628,28 @@ footer p {
   }
   .spotlight-visual { min-width: unset; }
   .nav-links { display: none; }
+  .grade-chart-layout { grid-template-columns: 1fr; gap: 40px; }
+  .how-steps-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
+  .table-wrap table {
+    table-layout: fixed;
+    min-width: 500px;
+  }
+  .table-wrap thead th {
+    font-size: 13px;
+    padding: 14px 10px;
+    width: 33.33%;
+  }
+  .table-wrap tbody td {
+    font-size: 13px;
+    padding: 12px 10px;
+    width: 33.33%;
+  }
+  .table-wrap tbody td:first-child {
+    width: 33.33%;
+  }
 }
 
 @media (max-width: 640px) {

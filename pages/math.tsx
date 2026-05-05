@@ -24,7 +24,7 @@ export default function MathClasses() {
             <span className="gradient-text">Built Around Your Child</span>
           </h1>
           <p className="hero-sub">
-            1-on-1 live classes that move at your child&apos;s pace, follow their school&apos;s curriculum, and build a real love for maths.
+            1-on-1 live classes that move at your child&apos;s pace, follow their school&apos;s curriculum, and build a real love for math.
           </p>
           <div className="hero-actions">
             <a href={trialUrl} className="btn-primary">Book a Free Trial</a>
@@ -45,7 +45,7 @@ export default function MathClasses() {
             </div>
             <div className="hero-stat">
               <span className="hero-stat-value">❤️</span>
-              <span className="hero-stat-label">Love for Maths</span>
+              <span className="hero-stat-label">Love for Math</span>
             </div>
           </div>
         </header>
@@ -76,7 +76,7 @@ export default function MathClasses() {
         </section>
 
         {/* WHO IT'S FOR */}
-        <section id="how-it-works" style={{ background: 'white' }}>
+        <section style={{ background: 'white' }}>
           <div className="section-inner">
             <span className="section-tag">Who it&apos;s for</span>
             <h2 className="section-title">
@@ -84,7 +84,7 @@ export default function MathClasses() {
               So is every class.
             </h2>
             <p className="section-lead">
-              Kids come to Strive Math from every point on the spectrum. Here&apos;s where we typically see the biggest difference.
+              Kids come to Strive Math with a wide range of abilities and development areas. Here&apos;s where we typically see the biggest difference.
             </p>
             <div className="tracks-grid">
               <article className="track-card extension">
@@ -128,7 +128,7 @@ export default function MathClasses() {
               <article className="platform-card">
                 <div className="platform-icon">✍️</div>
                 <h3>Working shown, not just answers</h3>
-                <p>Your child types their working directly on screen and it converts to proper math notation in real time. Teachers can see every step, not just the final number — so they catch exactly where a misconception starts.</p>
+                <p>Your child types their working directly on screen and it converts to proper math notation in real time. Teachers can see every step, not just the final number, so they catch exactly where a misconception starts.</p>
               </article>
               <article className="platform-card">
                 <div className="platform-icon">🤝</div>
@@ -138,12 +138,12 @@ export default function MathClasses() {
               <article className="platform-card">
                 <div className="platform-icon">📊</div>
                 <h3>Mastery tracking, not just marks</h3>
-                <p>Every session feeds into a running record of what your child actually understands. You get a detailed report card mapped to real learning outcomes — not just a percentage on a test.</p>
+                <p>Every session feeds into a running record of what your child actually understands. You get a detailed report card mapped to real learning outcomes, not just a percentage on a test.</p>
               </article>
               <article className="platform-card">
                 <div className="platform-icon">🎛️</div>
-                <h3>Worksheets teachers can actually edit</h3>
-                <p>Teachers adapt worksheets on the fly — changing a question, adding an example, adjusting difficulty — by hand or with AI. Your child never gets a generic worksheet that&apos;s slightly wrong for them.</p>
+                <h3>Worksheets teachers can customise</h3>
+                <p>Teachers adapt worksheets on the fly, changing a question, adding an example, adjusting difficulty, by hand or with AI. Your child never gets a generic worksheet that&apos;s slightly wrong for them.</p>
               </article>
               <article className="platform-card">
                 <div className="platform-icon">🧩</div>
@@ -155,6 +155,76 @@ export default function MathClasses() {
                 <h3>Curriculum alignment built in</h3>
                 <p>Content is mapped to the curriculum your child actually studies. Students at UWCSEA, SAS, Dover Court and other international schools get material that matches what their school expects.</p>
               </article>
+            </div>
+          </div>
+        </section>
+
+        {/* REPORT CARD */}
+        <section style={{ background: 'var(--bg-purple-tint)' }}>
+          <div className="section-inner two-col">
+            <div>
+              <span className="section-tag">The report card</span>
+              <h2 className="section-title">
+                Never-before-seen clarity<br />on your child&apos;s progress
+              </h2>
+              <p className="section-lead">
+                Our state-of-the-art Report Card gives you never seen before clarity on your child&apos;s standing and progress.
+              </p>
+              <ul className="track-list check-list" style={{ marginTop: '24px' }}>
+                <li>Teacher&apos;s remarks on your child&apos;s confidence and attitude towards math</li>
+                <li>Cognitive development tracking: memory, focus, grit and self-sufficiency</li>
+                <li>Academic mastery mapped topic by topic against the school curriculum</li>
+                <li>Updated after every single session</li>
+              </ul>
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <img
+                src="/images/math/math-report-card.webp"
+                alt="Strive Math Report Card showing Teacher's Remarks with confidence and emotional relationship with math, Cognitive Development scores for memory, focus, grit and self-sufficiency, and Academic Learning Outcomes by topic including mastery percentages"
+                className="report-card-img"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* GRADE INCREASE */}
+        <section style={{ background: 'white' }}>
+          <div className="section-inner">
+            <div className="grade-chart-layout">
+              <div>
+                <span className="section-tag">Proven results</span>
+                <h2 className="section-title">
+                  Our approach increases students&apos; grades by{' '}
+                  <span style={{ color: 'var(--accent-pink)' }}>41% over 12 months.</span>
+                </h2>
+              </div>
+              <div>
+                <div className="grade-bars-row">
+                  {[
+                    { year: '2015', pass: 51, fail: 49 },
+                    { year: '2016', pass: 72, fail: 28 },
+                    { year: '2017', pass: 74, fail: 26 },
+                    { year: '2018', pass: 77, fail: 23 },
+                    { year: '2019', pass: 88, fail: 12 },
+                  ].map(({ year, pass, fail }) => (
+                    <div key={year} className="grade-bar-col">
+                      <div className="grade-bar">
+                        <div className="grade-bar-pass" style={{ flex: pass }}>
+                          <span>{pass}%</span>
+                        </div>
+                        <div className="grade-bar-fail" style={{ flex: fail }}>
+                          <span>{fail}%</span>
+                        </div>
+                      </div>
+                      <span className="grade-bar-year">{year}</span>
+                    </div>
+                  ))}
+                </div>
+                <p className="grade-chart-caption">
+                  Strive uses the C-STEM approach from UC Davis, which raised math scores from 51% to 72% in one year and 88% in four years.
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -271,6 +341,42 @@ export default function MathClasses() {
                   </tr>
                 </tbody>
               </table>
+            </div>
+          </div>
+        </section>
+
+        {/* HOW IT WORKS */}
+        <section id="how-it-works" style={{ background: 'var(--bg-subtle)' }}>
+          <div className="section-inner">
+            <span className="section-tag">How it works</span>
+            <h2 className="section-title">Up and running in three steps</h2>
+            <p className="section-lead">
+              Before your child&apos;s first class, we take the time to understand exactly where they are — so every session is built around them from day one.
+            </p>
+            <div style={{ textAlign: 'center', margin: '40px 0 0' }}>
+              <img
+                src="/images/math/math-how%20it%20works.webp"
+                alt="Three-step onboarding: photos of past work via WhatsApp, expert topic-by-topic assessment, tailored lesson plan"
+                style={{ maxWidth: '600px', width: '100%' }}
+                loading="lazy"
+              />
+            </div>
+            <div className="how-steps-grid">
+              <div className="how-step">
+                <div className="how-step-num">1</div>
+                <h3>Share past work</h3>
+                <p>We collect photos of your child&apos;s past tests and homework via WhatsApp, so we understand exactly where they are.</p>
+              </div>
+              <div className="how-step">
+                <div className="how-step-num">2</div>
+                <h3>Expert assessment</h3>
+                <p>Our teachers assess your child&apos;s understanding topic by topic and build a complete picture of their strengths and gaps.</p>
+              </div>
+              <div className="how-step">
+                <div className="how-step-num">3</div>
+                <h3>Tailored lesson plan</h3>
+                <p>We create a personalised Lesson Plan built around your child&apos;s specific needs, then classes begin.</p>
+              </div>
             </div>
           </div>
         </section>
