@@ -9,7 +9,7 @@ export default function MathClasses() {
     <>
       <Head>
         <title>1-on-1 Math Classes for Kids in Singapore — Strive</title>
-        <meta name="description" content="Live, 1-on-1 math tutoring for students in grades 5–8. Curriculum-aligned, fully online, SGD 80/hr. Serving UWCSEA, SAS, Dover Court and more." />
+        <meta name="description" content="Live, 1-on-1 math tutoring for students in grades 4–9. Curriculum-aligned, fully online, SGD 80/hr. Serving UWCSEA, SAS, Dover Court and more." />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
 
@@ -18,7 +18,7 @@ export default function MathClasses() {
       <main>
         {/* HERO */}
         <header className="hero">
-          <div className="hero-tag">1-on-1 · Grades 5–8 · Online</div>
+          <div className="hero-tag">1-on-1 · Grades 4–9 · Online</div>
           <h1>
             Math Classes<br />
             <span className="gradient-text">Built Around Your Child</span>
@@ -62,7 +62,7 @@ export default function MathClasses() {
                 One hour.
               </h2>
               <p className="section-lead">
-                Strive Math is live, 1-on-1 math tutoring for students in grades 5 to 8. Your child works with a matched expert teacher on exactly what they need — nothing more, nothing less.
+                Strive Math is live, 1-on-1 math tutoring for students in grades 4 to 9. Your child works with a matched expert teacher on exactly what they need — nothing more, nothing less.
               </p>
             </div>
             <aside className="highlight-box">
@@ -389,7 +389,7 @@ export default function MathClasses() {
             <div className="faq-grid">
               <article className="faq-item">
                 <h3>What grades do you teach?</h3>
-                <p>We primarily teach grades 5 to 8, but we work with younger students who are ready for it and older students who need to consolidate foundations. If you&apos;re unsure, book a trial and we&apos;ll assess where your child is.</p>
+                <p>We primarily teach grades 4 to 9, but we work with younger students who are ready for it and older students who need to consolidate foundations. If you&apos;re unsure, book a trial and we&apos;ll assess where your child is.</p>
               </article>
               <article className="faq-item">
                 <h3>Do you follow my child&apos;s school curriculum?</h3>
@@ -449,14 +449,14 @@ export default function MathClasses() {
           <a href={trialUrl} className="btn-primary" style={{ fontSize: '18px', padding: '18px 44px' }}>
             Book a Free Trial Class
           </a>
-          <p className="cta-note">1-on-1 · Online · Grades 5–8 · SGD 80/hr</p>
+          <p className="cta-note">1-on-1 · Online · Grades 4–9 · SGD 80/hr</p>
         </section>
       </main>
 
       <footer>
         <div className="footer-inner">
           <p className="footer-logo">Strive<span>.</span></p>
-          <p>Online math tutoring for students in grades 5 to 8.</p>
+          <p>Online math tutoring for students in grades 4 to 9.</p>
           <p>1-on-1 live classes with expert teachers. Online and open to students worldwide.</p>
           <p style={{ marginTop: '20px', fontSize: '12px' }}>
             Strong community of students in Singapore, including families at UWCSEA, SAS, and Dover Court.

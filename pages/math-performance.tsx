@@ -50,7 +50,7 @@ export default function MathPerformance() {
     <>
       <Head>
         <title>Math Performance Bootcamp — Strive</title>
-        <meta name="description" content="8-session 1-on-1 Math Performance bootcamp for grades 5–9. Olympiad techniques, competition prep, and a global diagnostic benchmark. SGD 640." />
+        <meta name="description" content="8-session 1-on-1 Math Performance bootcamp for grades 4–9. Olympiad techniques, competition prep, and a global diagnostic benchmark. SGD 640." />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <script
           type="application/ld+json"
@@ -178,7 +178,7 @@ export default function MathPerformance() {
               <span className="section-tag">Who this is for</span>
               <h2 className="section-title">Is this right for your child?</h2>
               <ul className="track-list box-list" style={{ marginTop: '24px', fontSize: '15px', lineHeight: 1.7 }}>
-                <li>Grades 5–9 A/B students at international schools</li>
+                <li>Grades 4–9 A/B students at international schools</li>
                 <li>Students who find school math unchallenging</li>
                 <li>Kids interested in math competitions (or parents interested for them!)</li>
                 <li>Families who want to know where their child stands globally</li>

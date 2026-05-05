@@ -50,7 +50,7 @@ export default function MathConfidence() {
     <>
       <Head>
         <title>Math Confidence Bootcamp — Strive</title>
-        <meta name="description" content="8-session 1-on-1 Math Confidence bootcamp for grades 5–9. Diagnostic assessment, curriculum-aligned coaching, and a detailed progress report. SGD 640." />
+        <meta name="description" content="8-session 1-on-1 Math Confidence bootcamp for grades 4–9. Diagnostic assessment, curriculum-aligned coaching, and a detailed progress report. SGD 640." />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <script
           type="application/ld+json"
@@ -188,7 +188,7 @@ export default function MathConfidence() {
               <span className="section-tag">Who this is for</span>
               <h2 className="section-title">Is this right for your child?</h2>
               <ul className="track-list box-list" style={{ marginTop: '24px', fontSize: '15px', lineHeight: 1.7 }}>
-                <li>Grades 5–9 students at international schools</li>
+                <li>Grades 4–9 students at international schools</li>
                 <li>Kids who say they don&apos;t like math (anymore)</li>
                 <li>Students who are capable but don&apos;t engage</li>
                 <li>Children who get anxious or distracted during math</li>
