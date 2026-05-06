@@ -19,3 +19,6 @@ next-env.d.ts
 
 # Claude Code
 .claude/
+
+# Raw content (Notion exports, not for git)
+raw-content/
