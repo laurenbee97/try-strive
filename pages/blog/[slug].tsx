@@ -66,8 +66,8 @@ export default function BlogPost({ source, frontmatter, slug }: BlogPostProps) {
     '@type': 'BlogPosting',
     headline: frontmatter.title,
     description: frontmatter.description,
-    datePublished: frontmatter.date,
-    dateModified: frontmatter.updatedDate || frontmatter.date,
+    datePublished: publishDate.toISOString(),
+    dateModified: modifiedDate.toISOString(),
     url: `https://try.strivemath.com/blog/${slug}`,
     author: { '@type': 'Organization', name: 'Strive', url: 'https://strivemath.com' },
     publisher: { '@type': 'Organization', name: 'Strive', url: 'https://strivemath.com' },
@@ -84,9 +84,9 @@ export default function BlogPost({ source, frontmatter, slug }: BlogPostProps) {
         <meta property="og:type" content="article" />
         <meta property="og:title" content={frontmatter.title} />
         <meta property="og:description" content={frontmatter.description} />
-        <meta property="article:published_time" content={frontmatter.date} />
+        <meta property="article:published_time" content={publishDate.toISOString()} />
         {frontmatter.updatedDate && (
-          <meta property="article:modified_time" content={frontmatter.updatedDate} />
+          <meta property="article:modified_time" content={modifiedDate.toISOString()} />
         )}
         {frontmatter.tags?.map(tag => (
           <meta key={tag} property="article:tag" content={tag} />
@@ -104,7 +104,7 @@ export default function BlogPost({ source, frontmatter, slug }: BlogPostProps) {
           <header className="blog-post-header">
             <div className="blog-post-meta">
               <Link href="/blog" className="blog-back">← Blog</Link>
-              <time dateTime={frontmatter.date}>
+              <time dateTime={publishDate.toISOString()}>
                 {publishDate.toLocaleDateString('en-SG', {
                   year: 'numeric',
                   month: 'long',
