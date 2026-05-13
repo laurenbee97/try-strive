@@ -118,42 +118,26 @@ export default function MathClasses() {
           <div className="section-inner">
             <span className="section-tag">The platform</span>
             <h2 className="section-title">
-              Built for math.<br />
-              Not just video calls.
+              Built for math.
             </h2>
             <p className="section-lead">
-              We built our own platform specifically for teaching math online. It does things a whiteboard and a shared screen can&apos;t.
+              We built our own platform specifically for teaching math online.
             </p>
             <div className="platform-grid">
               <article className="platform-card">
-                <div className="platform-icon">✍️</div>
-                <h3>Working shown, not just answers</h3>
-                <p>Your child types their working directly on screen and it converts to proper math notation in real time. Teachers can see every step, not just the final number, so they catch exactly where a misconception starts.</p>
-              </article>
-              <article className="platform-card">
                 <div className="platform-icon">🤝</div>
-                <h3>Live collaboration on worksheets</h3>
-                <p>Teacher and student work on the same document at the same time. Either can annotate, edit, or draw on any part of the worksheet. It feels like sitting side by side, not staring at a shared screen.</p>
+                <h3>Feels like sitting side by side</h3>
+                <p>Teacher and student work on the same adaptable worksheet at the same time. Either can annotate, edit, or draw on any part of the worksheet — so the session feels like sitting side by side, not staring at a shared screen. Worksheets include visual interactive examples to make learning fun, relevant and aligned to student interests.</p>
               </article>
               <article className="platform-card">
                 <div className="platform-icon">📊</div>
                 <h3>Mastery tracking, not just marks</h3>
-                <p>Every session feeds into a running record of what your child actually understands. You get a detailed report card mapped to real learning outcomes, not just a percentage on a test.</p>
-              </article>
-              <article className="platform-card">
-                <div className="platform-icon">🎛️</div>
-                <h3>Worksheets teachers can customise</h3>
-                <p>Teachers adapt worksheets on the fly, changing a question, adding an example, adjusting difficulty, by hand or with AI. Your child never gets a generic worksheet that&apos;s slightly wrong for them.</p>
-              </article>
-              <article className="platform-card">
-                <div className="platform-icon">🧩</div>
-                <h3>Visual tools that match the concept</h3>
-                <p>The platform suggests the right manipulatives for each topic as your child works through it — number lines, fraction bars, geometry tools — so abstract ideas become concrete ones.</p>
+                <p>Your child types their working directly on screen so teachers can see every step, not just the final answer — catching exactly where a misconception starts. Every session feeds into a running record of what your child actually understands, giving you a detailed report card mapped to real learning outcomes, not just a percentage on a test.</p>
               </article>
               <article className="platform-card">
                 <div className="platform-icon">📋</div>
-                <h3>Curriculum alignment built in</h3>
-                <p>Content is mapped to the curriculum your child actually studies. Students at UWCSEA, SAS, Dover Court and other international schools get material that matches what their school expects.</p>
+                <h3>Curriculum alignment and homework</h3>
+                <p>Content is mapped to the curriculum your child actually studies. Teachers adapt worksheets on the fly — changing a question, adding an example, adjusting difficulty, by hand or with AI — and send homework after class that engages and reinforces the concepts taught.</p>
               </article>
             </div>
           </div>
