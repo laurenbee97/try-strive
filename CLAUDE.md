@@ -62,15 +62,12 @@ design-extract-output/          — Figma/design token exports (reference only, 
 
 ## Shared nav pattern
 
-Every page has an identical inline `<nav>` block — there is no shared `<Layout>` component. The nav uses:
+Every page has an identical inline `<nav>` block — there is no shared `<Layout>` component. Each page defines its own `const trialUrl` hardcoded to the appropriate destination:
 
-```tsx
-const trialUrl = process.env.NEXT_PUBLIC_TRIAL_URL || '/math#trial'
-// then in JSX:
-<a href={trialUrl} className="nav-cta">Book a Free Trial</a>
-```
+- `math.tsx` → `https://calendly.com/strive-trial-class/try-a-math-class`
+- `index.tsx` and `ai-first-software-development.tsx` → `https://www.strivemath.com/?show_form=true&plan=navbar`
 
-`NEXT_PUBLIC_TRIAL_URL` must be set in Vercel dashboard environment variables for production. Current nav links: Mathematics `/math`, AI-First Software Development `/ai-first-software-development`, Blog `/blog`.
+Current nav links: Mathematics `/math`, AI-First Software Development `/ai-first-software-development`, Blog `/blog`.
 
 ---
 
