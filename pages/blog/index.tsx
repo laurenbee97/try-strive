@@ -28,6 +28,7 @@ export default function BlogIndex({ posts }: BlogIndexProps) {
         <title>Blog — Strive</title>
         <meta name="description" content="Tips, guides and learning resources for maths and AI-first software development from the Strive team." />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="canonical" href="https://try.strivemath.com/blog" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

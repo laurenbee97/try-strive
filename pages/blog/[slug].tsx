@@ -81,9 +81,13 @@ export default function BlogPost({ source, frontmatter, slug }: BlogPostProps) {
         <title>{`${frontmatter.title} — Strive Blog`}</title>
         <meta name="description" content={frontmatter.description} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="canonical" href={`https://try.strivemath.com/blog/${slug}`} />
         <meta property="og:type" content="article" />
         <meta property="og:title" content={frontmatter.title} />
         <meta property="og:description" content={frontmatter.description} />
+        {frontmatter.coverImage && (
+          <meta property="og:image" content={`https://try.strivemath.com${frontmatter.coverImage}`} />
+        )}
         <meta property="article:published_time" content={publishDate.toISOString()} />
         {frontmatter.updatedDate && (
           <meta property="article:modified_time" content={modifiedDate.toISOString()} />
