@@ -78,7 +78,7 @@ export default function BlogPost({ source, frontmatter, slug }: BlogPostProps) {
   return (
     <>
       <Head>
-        <title>{frontmatter.title} — Strive Blog</title>
+        <title>{`${frontmatter.title} — Strive Blog`}</title>
         <meta name="description" content={frontmatter.description} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta property="og:type" content="article" />
