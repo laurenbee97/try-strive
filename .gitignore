@@ -22,3 +22,6 @@ next-env.d.ts
 
 # Raw content (Notion exports, not for git)
 raw-content/
+
+# Local-only docs (not for publishing)
+migration-plan.md
