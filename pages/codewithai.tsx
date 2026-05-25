@@ -7,7 +7,7 @@ const stripeUrl = 'https://book.stripe.com/eVa5nd4au0CX2mQ14T'
 
 const faqs = [
   {
-    question: 'How and when do I schedule/book the classes?',
+    question: 'How and when do I schedule or book the classes?',
     answer: 'Once you make the payment, our team gets in contact with you. In this call we learn more about the student, pair them with the right teacher, and create a customised schedule for you.',
   },
   {
