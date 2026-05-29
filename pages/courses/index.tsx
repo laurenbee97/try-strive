@@ -19,7 +19,7 @@ export default function CoursesIndex() {
     <>
       <Head>
         <title>Courses — Strive</title>
-        <meta name="description" content="Strive offers 1-on-1 online courses in Mathematics and AI-First Software Development for students in Singapore and worldwide." />
+        <meta name="description" content="Strive offers 1-on-1 online courses in Mathematics and AI Coding for students in Singapore and worldwide." />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
 
@@ -48,10 +48,10 @@ export default function CoursesIndex() {
                 <span className="course-badge badge-live">Live</span>
               </Link>
 
-              <Link href="/ai-first-software-development" className="course-card">
+              <Link href="/courses/ai-coding" className="course-card">
                 <div className="course-card-left">
                   <div className="course-icon">💻</div>
-                  <h2 className="course-title">AI-First Software Development</h2>
+                  <h2 className="course-title">AI Coding</h2>
                   <p className="course-subtitle">Build real products with AI tools</p>
                 </div>
                 <span className="course-badge badge-live">Live</span>

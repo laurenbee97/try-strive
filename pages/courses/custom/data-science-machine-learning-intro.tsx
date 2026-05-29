@@ -220,7 +220,7 @@ export default function AdvancedAICourse() {
               <article className="fit-card good">
                 <h3>Good fit if your child...</h3>
                 <ul className="fit-list">
-                  <li>Has completed Strive&apos;s AI-First Software Development course, or has equivalent coding experience</li>
+                  <li>Has completed Strive&apos;s AI Coding course, or has equivalent coding experience</li>
                   <li>Is aged 10 to 16</li>
                   <li>Wants to understand how AI actually works, not just use it</li>
                   <li>Is comfortable reading and writing code independently</li>
@@ -235,8 +235,8 @@ export default function AdvancedAICourse() {
                 </ul>
                 <p style={{ marginTop: '16px', fontSize: '14px', color: 'var(--text-dark)' }}>
                   New to coding?{' '}
-                  <Link href="/ai-first-software-development" style={{ color: 'var(--primary)', fontWeight: 600, textDecoration: 'none' }}>
-                    Start with AI-First Software Development →
+                  <Link href="/courses/ai-coding" style={{ color: 'var(--primary)', fontWeight: 600, textDecoration: 'none' }}>
+                    Start with AI Coding →
                   </Link>
                 </p>
               </article>

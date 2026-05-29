@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Nav from '@/components/Nav'
 
-const contactEmail = 'pulkit@strivemath.com'
+const contactEmail = 'CCA@strivemath.com'
 
 const curriculum = [
   { week: 1,  theme: 'Starting Our Coding Adventure',    learn: 'Discover the fun of making our own app.',                                              tech: 'Introduction to Python and basic algorithmic structures.' },
@@ -21,8 +21,8 @@ export default function CCAIndex() {
   return (
     <>
       <Head>
-        <title>STEM ECA for International Schools — Strive Math</title>
-        <meta name="description" content="Weekly coding and math ECA programmes for international schools in Singapore. Strive supplies the teacher, curriculum, and platform." />
+        <title>STEM CCA for International Schools — Strive Math</title>
+        <meta name="description" content="Weekly coding and math CCA programmes for international schools in Singapore. Strive supplies the teacher, curriculum, and platform." />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
 
@@ -33,7 +33,7 @@ export default function CCAIndex() {
         <header className="hero">
           <div className="hero-tag">ECA · CCA · ASA · International Schools · Singapore</div>
           <h1>
-            STEM ECA<br />
+            STEM CCA<br />
             <span className="gradient-text">for International Schools</span>
           </h1>
           <p className="hero-sub">
@@ -70,8 +70,7 @@ export default function CCAIndex() {
             <div>
               <span className="section-tag">What is it?</span>
               <h2 className="section-title">
-                In-person coding classes.<br />
-                At your school.
+                In-person coding and math classes at your school.
               </h2>
               <p className="section-lead">
                 After-school enrichment coding and math programmes that run on-site as CCAs, ECAs, or ASAs. We supply the teacher, curriculum, and platform. Your school markets the programme and manages enrolment.
@@ -91,9 +90,9 @@ export default function CCAIndex() {
         <section style={{ background: 'white' }}>
           <div className="section-inner">
             <span className="section-tag">Our partner schools</span>
-            <h2 className="section-title">Trusted by 11 international schools</h2>
+            <h2 className="section-title">Trusted by 11+ international schools</h2>
             <p className="section-lead">
-              Including Nexus International School, Dover Court International School, North London Collegiate School, Swiss School, and Middleton International School — with programmes consistently reaching full enrolment.
+              Including Nexus International School, Dover Court International School, North London Collegiate School, Swiss School, and Middleton International School, with programmes consistently reaching full enrolment.
             </p>
             <div className="cca-school-stats">
               <div className="cca-school-stat">
@@ -204,8 +203,8 @@ export default function CCAIndex() {
               </article>
               <article className="platform-card">
                 <div className="platform-icon">🏆</div>
-                <h3>Biannual Competitions</h3>
-                <p>Students can enter our inter-school coding competitions, with participation from UWCSEA East, ACS International, and more.</p>
+                <h3>Competitions</h3>
+                <p>Students can enter our inter-school math and coding competitions, with participation from UWCSEA East, ACS International, and more.</p>
               </article>
             </div>
           </div>
@@ -252,7 +251,7 @@ export default function CCAIndex() {
                 and platform.
               </h2>
               <p className="section-lead">
-                We bring the same philosophy to in-school programmes that we apply online: students build real, visual projects rather than following a generic coding workbook.
+                We bring the same philosophy to in-school programmes that we apply online: students build real, visual projects rather than following a generic workbook.
               </p>
             </div>
             <aside className="highlight-box">
@@ -267,10 +266,10 @@ export default function CCAIndex() {
 
         {/* CTA */}
         <section className="cta-section">
-          <h2>Bring a Coding ECA to your school</h2>
+          <h2>Bring a coding or math CCA to your school</h2>
           <p>Reach out to discuss adding a Strive programme to your next CCA cycle.</p>
           <a href={`mailto:${contactEmail}`} className="btn-primary" style={{ fontSize: '18px', padding: '18px 44px' }}>
-            Email pulkit@strivemath.com
+            Contact Us
           </a>
           <p className="cta-note">For international schools in Singapore · Ages 8–16 · Laptops provided · No setup required</p>
         </section>
@@ -279,8 +278,8 @@ export default function CCAIndex() {
       <footer>
         <div className="footer-inner">
           <p className="footer-logo">Strive<span>.</span></p>
-          <p>Coding ECA programmes for international schools in Singapore.</p>
-          <p>We also offer 1-on-1 online tutoring in Mathematics and AI-First Software Development.</p>
+          <p>Coding and math CCA programmes for international schools in Singapore.</p>
+          <p>We also offer 1-on-1 online tutoring in Mathematics, Coding and AI Coding.</p>
         </div>
       </footer>
     </>

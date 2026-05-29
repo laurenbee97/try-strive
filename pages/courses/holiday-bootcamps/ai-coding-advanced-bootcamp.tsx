@@ -94,7 +94,7 @@ export default function AIFirstCodingBootcamp() {
         <section style={{ background: 'var(--bg-subtle)' }}>
           <div className="section-inner">
             <span className="section-tag">About the course</span>
-            <h2 className="section-title">AI-First Software Development</h2>
+            <h2 className="section-title">AI Coding</h2>
             <p className="section-lead" style={{ maxWidth: '720px' }}>
               An engaging course for students aged 13–18 to master real-world software engineering by collaborating with AI tools, guided by an experienced teacher. Students build and deploy full-stack web apps — websites, games, and apps — using AI as a professional development tool, not a shortcut.
             </p>
