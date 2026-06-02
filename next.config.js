@@ -3,6 +3,14 @@ const nextConfig = {
   reactStrictMode: true,
   // Ensures _next/static assets use absolute URLs when pages are served via reverse proxy
   assetPrefix: process.env.VERCEL_ENV === 'production' ? 'https://try.strivemath.com' : '',
+  async headers() {
+    return [
+      {
+        source: '/:path*',
+        headers: [{ key: 'X-Robots-Tag', value: 'noindex' }],
+      },
+    ]
+  },
   async redirects() {
     return [
       // Root → courses landing
