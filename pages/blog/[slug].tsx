@@ -68,11 +68,11 @@ export default function BlogPost({ source, frontmatter, slug }: BlogPostProps) {
     description: frontmatter.description,
     datePublished: publishDate.toISOString(),
     dateModified: modifiedDate.toISOString(),
-    url: `https://try.strivemath.com/blog/${slug}`,
+    url: `https://strivemath.com/blog/${slug}`,
     author: { '@type': 'Organization', name: 'Strive', url: 'https://strivemath.com' },
     publisher: { '@type': 'Organization', name: 'Strive', url: 'https://strivemath.com' },
   }
-  if (frontmatter.coverImage) jsonLd.image = `https://try.strivemath.com${frontmatter.coverImage}`
+  if (frontmatter.coverImage) jsonLd.image = `https://try-strive.vercel.app${frontmatter.coverImage}`
   if (frontmatter.tags?.length) jsonLd.keywords = frontmatter.tags.join(', ')
 
   return (
@@ -81,12 +81,12 @@ export default function BlogPost({ source, frontmatter, slug }: BlogPostProps) {
         <title>{`${frontmatter.title} — Strive Blog`}</title>
         <meta name="description" content={frontmatter.description} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="canonical" href={`https://try.strivemath.com/blog/${slug}`} />
+        <link rel="canonical" key="canonical" href={`https://strivemath.com/blog/${slug}`} />
         <meta property="og:type" content="article" />
         <meta property="og:title" content={frontmatter.title} />
         <meta property="og:description" content={frontmatter.description} />
         {frontmatter.coverImage && (
-          <meta property="og:image" content={`https://try.strivemath.com${frontmatter.coverImage}`} />
+          <meta property="og:image" content={`https://try-strive.vercel.app${frontmatter.coverImage}`} />
         )}
         <meta property="article:published_time" content={publishDate.toISOString()} />
         {frontmatter.updatedDate && (

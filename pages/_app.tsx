@@ -1,5 +1,7 @@
 import type { AppProps } from 'next/app'
 import { ChakraProvider, extendTheme } from '@chakra-ui/react'
+import { useRouter } from 'next/router'
+import Head from 'next/head'
 import '../styles/globals.css'
 
 // Minimal theme: fonts + core brand colors only.
@@ -23,8 +25,17 @@ const theme = extendTheme({
 })
 
 export default function App({ Component, pageProps }: AppProps) {
+  const router = useRouter()
+  const isContentPath = /^\/(blog|courses|other)(\/|$)/.test(router.pathname)
+  const canonicalPath = router.asPath.split('?')[0]
+
   return (
     <ChakraProvider theme={theme} resetCSS={false}>
+      {isContentPath && (
+        <Head>
+          <link rel="canonical" key="canonical" href={`https://strivemath.com${canonicalPath}`} />
+        </Head>
+      )}
       <Component {...pageProps} />
     </ChakraProvider>
   )
