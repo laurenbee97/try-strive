@@ -40,6 +40,11 @@ function BlogLink({ href, children, ...props }: React.AnchorHTMLAttributes<HTMLA
 
 const components = { img: BlogImage, p: BlogParagraph, a: BlogLink, YouTubeEmbed, CodeEmbed }
 
+interface FAQ {
+  question: string
+  answer: string
+}
+
 interface Frontmatter {
   title: string
   date: string
@@ -47,6 +52,7 @@ interface Frontmatter {
   description: string
   tags: string[]
   coverImage?: string
+  faqs?: FAQ[]
 }
 
 interface BlogPostProps {
@@ -99,6 +105,22 @@ export default function BlogPost({ source, frontmatter, slug }: BlogPostProps) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        {frontmatter.faqs?.length && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                '@context': 'https://schema.org',
+                '@type': 'FAQPage',
+                mainEntity: frontmatter.faqs.map(faq => ({
+                  '@type': 'Question',
+                  name: faq.question,
+                  acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+                })),
+              }),
+            }}
+          />
+        )}
       </Head>
 
       <Nav />
