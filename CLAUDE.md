@@ -2,7 +2,11 @@
 
 ## Project overview
 
-Next.js 14 (Pages Router) marketing + blog site for Strive, an edtech company teaching maths and AI-first software development. Currently deployed to Vercel. Future plan: move to `try.strivemath.com` subdomain.
+Next.js 14 (Pages Router) marketing + blog site for Strive, an edtech company teaching maths and AI-first software development. Currently deployed to Vercel.
+
+**Domain setup:**
+- `images.strivemath.com` — live Vercel custom domain on this project. Used as `assetPrefix` (serves `_next/static/*` JS/CSS bundles) and as the base URL for all OG and JSON-LD image references in blog posts. Configured in `next.config.js` and via the `IMAGES_BASE` constant in `pages/blog/[slug].tsx`.
+- `try.strivemath.com` — redirects to `strivemath.com` via path-forwarding (not served by this app). Do not add this as a Vercel domain for this project.
 
 **Dev server:** `npm run dev` — usually starts on port 3000, but falls back to 3001/3002 if ports are occupied.
 

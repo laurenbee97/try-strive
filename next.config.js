@@ -2,10 +2,10 @@
 const nextConfig = {
   reactStrictMode: true,
   // Ensures _next/static assets use absolute URLs when pages are served via reverse proxy
-  assetPrefix: process.env.VERCEL_ENV === 'production' ? 'https://try-strive.vercel.app' : '',
+  assetPrefix: process.env.VERCEL_ENV === 'production' ? 'https://images.strivemath.com' : '',
   images: {
     path: process.env.VERCEL_ENV === 'production'
-      ? 'https://try-strive.vercel.app/_next/image'
+      ? 'https://images.strivemath.com/_next/image'
       : '/_next/image',
   },
   async headers() {
