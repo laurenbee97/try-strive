@@ -62,6 +62,7 @@ interface BlogPostProps {
 }
 
 const trialUrl = 'https://www.strivemath.com/?show_form=true&plan=navbar'
+const IMAGES_BASE = 'https://images.strivemath.com'
 
 export default function BlogPost({ source, frontmatter, slug }: BlogPostProps) {
   const publishDate = new Date(frontmatter.date)
@@ -78,7 +79,7 @@ export default function BlogPost({ source, frontmatter, slug }: BlogPostProps) {
     author: { '@type': 'Organization', name: 'Strive', url: 'https://strivemath.com' },
     publisher: { '@type': 'Organization', name: 'Strive', url: 'https://strivemath.com' },
   }
-  if (frontmatter.coverImage) jsonLd.image = `https://try-strive.vercel.app${frontmatter.coverImage}`
+  if (frontmatter.coverImage) jsonLd.image = `${IMAGES_BASE}${frontmatter.coverImage}`
   if (frontmatter.tags?.length) jsonLd.keywords = frontmatter.tags.join(', ')
 
   return (
@@ -92,7 +93,7 @@ export default function BlogPost({ source, frontmatter, slug }: BlogPostProps) {
         <meta property="og:title" content={frontmatter.title} />
         <meta property="og:description" content={frontmatter.description} />
         {frontmatter.coverImage && (
-          <meta property="og:image" content={`https://try-strive.vercel.app${frontmatter.coverImage}`} />
+          <meta property="og:image" content={`${IMAGES_BASE}${frontmatter.coverImage}`} />
         )}
         <meta property="article:published_time" content={publishDate.toISOString()} />
         {frontmatter.updatedDate && (
