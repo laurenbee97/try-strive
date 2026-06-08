@@ -2,7 +2,7 @@
 
 ## Project overview
 
-Next.js 14 (Pages Router) marketing + blog site for Strive, an edtech company teaching maths and AI-first software development. Currently deployed to Vercel.
+Next.js 14 (Pages Router) marketing + blog site for Strive, an edtech company teaching math and AI Coding. Currently deployed to Vercel.
 
 **Domain setup:**
 - `images.strivemath.com` — live Vercel custom domain on this project. Used as `assetPrefix` (serves `_next/static/*` JS/CSS bundles) and as the base URL for all OG and JSON-LD image references in blog posts. Configured in `next.config.js` and via the `IMAGES_BASE` constant in `pages/blog/[slug].tsx`.
@@ -33,7 +33,7 @@ Next.js 14 (Pages Router) marketing + blog site for Strive, an edtech company te
 pages/
   index.tsx                     — Courses landing (2×2 card grid)
   math.tsx                      — Mathematics course page (full marketing page)
-  ai-first-software-development.tsx — AI course page
+  courses/ai-coding.tsx             — AI Coding course page
   blog/
     index.tsx                   — Blog listing (reads content/blog/*.mdx at build time)
     [slug].tsx                  — Blog post page (SSG via getStaticPaths/getStaticProps)
@@ -42,7 +42,8 @@ pages/
   math-performance.tsx          — Placeholder
   makepythonapps.tsx            — Placeholder
   codewithai.tsx                — Placeholder
-  ai-first-coding-bootcamp.tsx  — Placeholder
+  courses/holiday-bootcamps/ai-coding-intro-bootcamp.tsx     — Placeholder
+  courses/holiday-bootcamps/ai-coding-advanced-bootcamp.tsx  — Placeholder
 
 components/blog/
   YouTubeEmbed.tsx              — Responsive 16:9 iframe, uses youtube-nocookie.com
@@ -69,9 +70,9 @@ design-extract-output/          — Figma/design token exports (reference only, 
 Every page has an identical inline `<nav>` block — there is no shared `<Layout>` component. Each page defines its own `const trialUrl` hardcoded to the appropriate destination:
 
 - `math.tsx` → `https://calendly.com/strive-trial-class/try-a-math-class`
-- `index.tsx` and `ai-first-software-development.tsx` → `https://www.strivemath.com/?show_form=true&plan=navbar`
+- `index.tsx` and `courses/ai-coding.tsx` → `https://www.strivemath.com/?show_form=true&plan=navbar`
 
-Current nav links: Mathematics `/math`, AI-First Software Development `/ai-first-software-development`, Blog `/blog`.
+Current nav links: Mathematics `/courses/math`, AI Coding `/courses/ai-coding`, Blog `/blog`.
 
 ---
 
