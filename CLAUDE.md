@@ -1,12 +1,12 @@
-# CLAUDE.md — Strive Site
+# CLAUDE.md — Strive Site (try-strive repo)
 
 ## Project overview
 
-Next.js 14 (Pages Router) marketing + blog site for Strive, an edtech company teaching math and AI Coding. Currently deployed to Vercel.
+Next.js 14 (Pages Router) marketing + blog site for Strive, an edtech company teaching math and AI Coding. Currently deployed to Vercel. This repo is `try.strivemath.com` — the plan is to eventually serve its content under `strivemath.com/blog` and `strivemath.com/courses/` via a reverse proxy (see [Reverse proxy plan](#reverse-proxy-plan) below).
 
 **Domain setup:**
 - `images.strivemath.com` — live Vercel custom domain on this project. Used as `assetPrefix` (serves `_next/static/*` JS/CSS bundles) and as the base URL for all OG and JSON-LD image references in blog posts. Configured in `next.config.js` and via the `IMAGES_BASE` constant in `pages/blog/[slug].tsx`.
-- `try.strivemath.com` — redirects to `strivemath.com` via path-forwarding (not served by this app). Do not add this as a Vercel domain for this project.
+- `try.strivemath.com` — this app is accessible here, but it is NOT registered as a Vercel custom domain for this project. Do not add it in Vercel — `images.strivemath.com` is the Vercel domain; `try.strivemath.com` is forwarded at the DNS level.
 
 **Dev server:** `npm run dev` — usually starts on port 3000, but falls back to 3001/3002 if ports are occupied.
 
@@ -31,48 +31,110 @@ Next.js 14 (Pages Router) marketing + blog site for Strive, an edtech company te
 
 ```
 pages/
-  index.tsx                     — Courses landing (2×2 card grid)
-  math.tsx                      — Mathematics course page (full marketing page)
-  courses/ai-coding.tsx             — AI Coding course page
+  _app.tsx                        — Global app wrapper
+  _document.tsx                   — Google Fonts loaded here
+  courses/
+    index.tsx                     — Courses landing (card grid)
+    math.tsx                      — Mathematics course page (full marketing page)
+    ai-coding.tsx                 — AI Coding course page
+    cca/
+      index.tsx                   — CCA (co-curricular activity) programme page
+    custom/
+      data-science-machine-learning-intro.tsx  — Hidden/custom course page
+    holiday-bootcamps/
+      index.tsx                   — Holiday bootcamps landing
+      ai-coding-intro-bootcamp.tsx
+      ai-coding-advanced-bootcamp.tsx
+      math-confidence-bootcamp.tsx
+      math-performance-bootcamp.tsx
+      python-apps-bootcamp.tsx
   blog/
-    index.tsx                   — Blog listing (reads content/blog/*.mdx at build time)
-    [slug].tsx                  — Blog post page (SSG via getStaticPaths/getStaticProps)
-  holidaycamps.tsx              — Placeholder (matches legacy Squarespace URL)
-  math-confidence.tsx           — Placeholder
-  math-performance.tsx          — Placeholder
-  makepythonapps.tsx            — Placeholder
-  codewithai.tsx                — Placeholder
-  courses/holiday-bootcamps/ai-coding-intro-bootcamp.tsx     — Placeholder
-  courses/holiday-bootcamps/ai-coding-advanced-bootcamp.tsx  — Placeholder
+    index.tsx                     — Blog listing (reads content/blog/*.mdx at build time)
+    [slug].tsx                    — Blog post page (SSG via getStaticPaths/getStaticProps)
+  other/
+    isa-webinar.tsx               — ISA webinar landing page
+    paidcodewithai-80.tsx         — Paid landing page
+    paidcodewithai-680.tsx
+    paidpythonapps-80.tsx
+    paidpythonapps-680.tsx
+    paidpythongames-80.tsx
+    paidpythongames-680.tsx
 
-components/blog/
-  YouTubeEmbed.tsx              — Responsive 16:9 iframe, uses youtube-nocookie.com
-  CodeEmbed.tsx                 — Generic sandboxed iframe for GeoGebra, CodePen, p5.js etc.
+components/
+  Nav.tsx                         — Shared nav component (used by all pages)
+  blog/
+    YouTubeEmbed.tsx              — Responsive 16:9 iframe, uses youtube-nocookie.com
+    CodeEmbed.tsx                 — Generic sandboxed iframe for GeoGebra, CodePen, p5.js etc.
 
 content/blog/
-  sample-post.mdx               — Reference file documenting frontmatter schema and embed syntax
-  joining-yc.mdx                — First real post (YC S21, published 2019-03-08)
+  *.mdx                           — ~27 blog posts; slug = filename without extension
 
 public/images/blog/
-  joining-yc/                   — cover.jpg, spirals.gif, multiplication-circles.gif,
-                                   pythagorean-theorem.gif, singapore-team.jpg, yc-portfolio.png
+  <slug>/                         — Per-post image folders (cover.jpg + any inline images)
 
 styles/
-  globals.css                   — Single stylesheet: design tokens, reset, nav, all page sections, blog
+  globals.css                     — Single stylesheet: design tokens, reset, nav, all page sections, blog
 
-design-extract-output/          — Figma/design token exports (reference only, not imported)
+reverse-proxy-plan.md             — Full plan for proxying this app under strivemath.com (do not delete)
+design-extract-output/            — Figma/design token exports (reference only, not imported)
 ```
 
 ---
 
-## Shared nav pattern
+## Shared nav
 
-Every page has an identical inline `<nav>` block — there is no shared `<Layout>` component. Each page defines its own `const trialUrl` hardcoded to the appropriate destination:
+All pages import and render `<Nav />` from `components/Nav.tsx`. There is no shared `<Layout>` component — nav is the only shared component. `Nav.tsx` hardcodes the CTA URL as:
 
-- `math.tsx` → `https://calendly.com/strive-trial-class/try-a-math-class`
-- `index.tsx` and `courses/ai-coding.tsx` → `https://www.strivemath.com/?show_form=true&plan=navbar`
+```ts
+const NAV_CTA_URL = 'https://www.strivemath.com/?show_form=true&plan=navbar'
+```
 
 Current nav links: Mathematics `/courses/math`, AI Coding `/courses/ai-coding`, Blog `/blog`.
+
+---
+
+## URL redirects
+
+`next.config.js` contains 17 temporary (`permanent: false`) redirect rules that map all legacy flat URLs to the current nested structure. These are `307` redirects intentionally — they will be updated to `301` and pointed at `strivemath.com` once the reverse proxy goes live (see Phase 5 of the reverse proxy plan).
+
+Key redirects:
+- `/` → `/courses`
+- `/math` → `/courses/math`
+- `/ai-first-software-development` → `/courses/ai-coding`
+- `/holidaycamps` → `/courses/holiday-bootcamps`
+- `/advanced-ai-course` → `/courses/custom/data-science-machine-learning-intro`
+- All `/paidcodewithai-*`, `/paidpythonapps-*`, `/paidpythongames-*` → `/other/*`
+
+**Do not change these to `permanent: true` yet** — that flip happens as part of the reverse proxy cutover.
+
+---
+
+## X-Robots-Tag headers
+
+`next.config.js` adds `X-Robots-Tag: noindex` to all routes that do NOT start with `/blog`, `/courses`, or `/other`. This prevents search engines from indexing `/` (which just redirects), any old flat paths, and any dev/test pages.
+
+---
+
+## Reverse proxy plan
+
+Full plan is in `reverse-proxy-plan.md`. Summary:
+
+**Goal:** Serve `strivemath.com/blog` and `strivemath.com/courses/*` by proxying requests from the main site to this repo, consolidating domain authority.
+
+**Already done in this repo:**
+- `assetPrefix: 'https://images.strivemath.com'` in `next.config.js` (production only) — ensures proxied pages load JS/CSS correctly
+- Canonical tags pointing to `strivemath.com` — implemented globally in `pages/_app.tsx` via the `isContentPath` regex (`/^\/(blog|courses|other)(\/|$)/`). Any page under `/blog`, `/courses`, or `/other` automatically gets a `strivemath.com` canonical. Individual blog post pages also have an explicit canonical in `[slug].tsx` as belt-and-suspenders.
+- JSON-LD `url` fields in blog posts already use `strivemath.com`
+- `og:image` on all blog posts (served via `images.strivemath.com`)
+- `public/robots.txt` created (currently allows all crawlers — tighten in Phase 4)
+
+**Pending phases (work in Repo A — strivemath.com):**
+- Phase 1: Move coding level pages into `/courses/coding/` and add 301 redirects
+- Phase 2: Add fallback rewrite rules in Repo A to proxy `/blog/*` and `/courses/*` to this app
+- Phase 4: Add sitemap to Repo A, update `robots.txt` here to disallow proxied paths
+- Phase 5 (optional): Add 301 redirects from this repo pointing to `strivemath.com`
+
+**Do not do Phase 4–5 until Phase 2 is confirmed working.**
 
 ---
 
@@ -148,6 +210,30 @@ The `design-extract-output/` folder contains Figma exports (design language doc,
 
 ---
 
+## Blog content pipeline (linkedin-to-blog skill)
+
+Blog posts are produced from LinkedIn content using the `linkedin-to-blog` Claude Code skill. Invoke it with `/linkedin-to-blog` or it triggers automatically when you reference a `raw-content/` file or Notion record.
+
+**Two input sources:**
+
+| Source | How to trigger |
+|---|---|
+| `raw-content/<name>.md` file | Drop the file and say "process this" / "post this to the blog" |
+| Notion LinkedIn Posts database | Name the record (e.g. "Ethan - GitHub") or paste a Notion URL |
+
+**What the skill does:**
+1. Extracts the post body and date from the source
+2. Picks an SEO/AEO keyword strategy and rewrite level
+3. Converts the cover image to WebP at 1200×675px (using Python PIL — not `sips`)
+4. Writes `content/blog/<slug>.mdx` with full frontmatter
+5. Moves images to `public/images/blog/<slug>/`
+6. Moves the source file to `raw-content/handled/` (gitignored — never commit `raw-content/`)
+7. If Notion source: updates the record's `State`, `Blog link`, and backfill date properties
+
+**Cover image spec:** exactly 1200×675 (16:9), WebP. The CSS enforces `aspect-ratio: 16/9` with `object-fit: cover` — keep subject matter in the centre 80%.
+
+---
+
 ## Adding a new blog post
 
 1. Create `content/blog/<slug>.mdx` with required frontmatter
@@ -155,6 +241,20 @@ The `design-extract-output/` folder contains Figma exports (design language doc,
 3. If there's a cover image, set `coverImage: "/images/blog/<slug>/cover.jpg"` in frontmatter
 4. The post appears automatically on `/blog` (sorted by date, newest first)
 
-## Adding a new page (placeholder or full)
+## Adding a new page
 
-Copy the pattern from any placeholder page (e.g. `pages/holidaycamps.tsx`): Head with title/description/viewport, inline nav, main content. No shared Layout component exists yet.
+Pages live under `pages/courses/`, `pages/other/`, or `pages/blog/` depending on their purpose. Import and render `<Nav />` from `components/Nav.tsx`. No shared `<Layout>` component exists — nav is the only shared component.
+
+If the new page replaces a legacy flat URL (e.g. `/foo`), add a redirect in `next.config.js`:
+```js
+{ source: '/foo', destination: '/courses/foo', permanent: false }
+```
+Keep it `permanent: false` until the reverse proxy is live.
+
+**Canonical tags:** Pages under `/blog`, `/courses`, and `/other` get a `strivemath.com` canonical automatically via `_app.tsx`. If you add a new top-level section (e.g. `/teachers/`), you must add it to the `isContentPath` regex in `pages/_app.tsx`, otherwise those pages will silently have no canonical tag:
+
+```ts
+// pages/_app.tsx
+const isContentPath = /^\/(blog|courses|other)(\/|$)/.test(router.pathname)
+// Add new sections here ↑
+```
