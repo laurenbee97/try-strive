@@ -45,10 +45,6 @@ export default function CCAIndex() {
           </div>
           <div className="hero-stats">
             <div className="hero-stat">
-              <span className="hero-stat-value">100%</span>
-              <span className="hero-stat-label">Sign-up rate at partner schools</span>
-            </div>
-            <div className="hero-stat">
               <span className="hero-stat-value">11</span>
               <span className="hero-stat-label">Schools running Strive programmes</span>
             </div>
