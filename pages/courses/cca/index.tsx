@@ -56,10 +56,6 @@ export default function CCAIndex() {
               <span className="hero-stat-value">Ages 8–16</span>
               <span className="hero-stat-label">Students served</span>
             </div>
-            <div className="hero-stat">
-              <span className="hero-stat-value">6</span>
-              <span className="hero-stat-label">Course types available</span>
-            </div>
           </div>
         </header>
         <hr className="rainbow-rule" />
@@ -115,7 +111,7 @@ export default function CCAIndex() {
         <section id="courses" style={{ background: 'var(--bg-subtle)' }}>
           <div className="section-inner">
             <span className="section-tag">Courses</span>
-            <h2 className="section-title">Six courses, each customisable<br />for your school&apos;s needs</h2>
+            <h2 className="section-title">Three courses, each customisable<br />for your school&apos;s needs</h2>
             <p className="section-lead">Each course can be tailored to the age groups and interests of your students. No prior experience required.</p>
             <div className="cca-courses-grid">
               <div className="cca-course-card cca-course-featured">
@@ -133,21 +129,6 @@ export default function CCAIndex() {
                 <div className="cca-course-icon">📏</div>
                 <h3>Mathematics</h3>
                 <p>Strengthen school maths with weekly sessions on curriculum topics, problem-solving strategies, and competition techniques.</p>
-              </div>
-              <div className="cca-course-card">
-                <div className="cca-course-icon">🧠</div>
-                <h3>AI Coding</h3>
-                <p>Use AI tools and prompting to build smarter apps and automate real-world problems.</p>
-              </div>
-              <div className="cca-course-card">
-                <div className="cca-course-icon">📐</div>
-                <h3>Math through Code</h3>
-                <p>Bring mathematical concepts to life through coding.</p>
-              </div>
-              <div className="cca-course-card">
-                <div className="cca-course-icon">📊</div>
-                <h3>Data Science</h3>
-                <p>Analyse real datasets and build visualisations with Python.</p>
               </div>
             </div>
           </div>
