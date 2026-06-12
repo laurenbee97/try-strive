@@ -7,18 +7,37 @@ const trialUrl = 'https://www.strivemath.com/?show_form=true&plan=navbar'
 
 const stories = [
   {
+    id: 'neil',
+    title: 'Nearby Notary',
+    body: [
+      "Neil was 16 when he rebuilt Singapore's official notary directory — because his dad couldn't use it. The SAL Directory had the data but was clunky and couldn't search by location, so Neil set out to fix it.",
+      'Using AI-assisted coding, he built a full-stack location-based search tool with Google Maps integration in just 5 hours. The result, nearbynotary.sg, makes public data actually usable. Neil is now approaching the government to see if they\'d like to adopt his design.',
+    ],
+    tags: ['Full-stack', 'Google Maps API', 'Location search', 'AI-assisted', 'Live on the internet'],
+    avatar: 'N',
+    screenshot: '/images/courses/spotlight/neil-nearby-notary.webp' as string | null,
+    name: 'Neil',
+    detail: 'Age 16',
+    blogUrl: '/blog/how-a-16-year-old-used-ai-to-rebuild-a-government-website',
+    gameUrl: 'https://www.nearbynotary.sg/' as string | null,
+    gameUrlLabel: 'Visit the website',
+    githubUrl: null as string | null,
+  },
+  {
     id: 'matias',
     title: 'The Dark Ages',
     body: [
-      'Matias spent two years as a Strive student. He loved video games and started coding because he wanted to make his own. By the end of his time with Strive, he had built The Dark Ages: a Minecraft-inspired, AI-assisted browser game built with JavaScript, React, and Next.js.',
+      'Matias loved video games and started coding because he wanted to make his own. By the end of his time with Strive, he had built The Dark Ages: a Minecraft-inspired, AI-assisted browser game built with JavaScript, React, and Next.js.',
       'He designed the game logic, used AI to develop the visuals and test new ideas, and deployed it live to the internet. Matias went from spending hours playing games to spending hours building them.',
     ],
     tags: ['JavaScript', 'React', 'Next.js', 'AI-assisted', 'Live on the internet'],
     avatar: 'M',
+    screenshot: '/images/courses/spotlight/matias-dark-ages.webp' as string | null,
     name: 'Matias',
-    detail: 'Strive student · 2 years',
+    detail: 'Age 13',
     blogUrl: '/blog/from-gamer-to-game-creator-how-matias-built-his-own-ai-powered-world',
     gameUrl: 'https://v0-dark-ages-game.vercel.app/' as string | null,
+    gameUrlLabel: 'Play the game',
     githubUrl: null as string | null,
   },
   {
@@ -30,10 +49,12 @@ const stories = [
     ],
     tags: ['Java', 'JCEF', 'JavaFX', 'AI-assisted', 'Desktop app'],
     avatar: 'E',
+    screenshot: '/images/courses/spotlight/ethan-browser.webp' as string | null,
     name: 'Ethan',
-    detail: 'Strive student · Age 13',
+    detail: 'Age 13',
     blogUrl: '/blog/ethan-built-a-browser-at-13',
     gameUrl: null as string | null,
+    gameUrlLabel: '',
     githubUrl: 'https://github.com/ingStudiosOfficial' as string | null,
   },
 ]
@@ -197,7 +218,7 @@ export default function AiFirstCoding() {
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
                                   <path d="M3 2L13 8L3 14V2Z" fill="currentColor" />
                                 </svg>
-                                Play the game
+                                {story.gameUrlLabel}
                               </a>
                             )}
                             {story.githubUrl && (
@@ -212,9 +233,17 @@ export default function AiFirstCoding() {
                           </div>
                         </div>
                         <aside className="spotlight-visual">
-                          <div className="spotlight-avatar">{story.avatar}</div>
-                          <p className="spotlight-name">{story.name}</p>
-                          <p className="spotlight-detail">{story.detail}</p>
+                          {story.screenshot ? (
+                            <img
+                              src={story.screenshot}
+                              alt={`${story.name}'s ${story.title} project`}
+                              className="spotlight-screenshot"
+                            />
+                          ) : (
+                            <div className="spotlight-avatar">{story.avatar}</div>
+                          )}
+                          <p className="spotlight-built-by">Built by</p>
+                          <p className="spotlight-label">{story.name} · {story.detail}</p>
                         </aside>
                       </article>
                     ))}
