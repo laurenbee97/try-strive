@@ -241,6 +241,49 @@ export default function CCAIndex() {
           </div>
         </section>
 
+        {/* FAQ */}
+        <section style={{ background: 'white' }}>
+          <div className="section-inner">
+            <span className="section-tag">FAQ</span>
+            <h2 className="section-title">Frequently asked questions</h2>
+            <p className="section-lead">Everything schools usually want to know about running a Strive CCA. Don&apos;t see your question? Email us at <a href={`mailto:${contactEmail}`}>{contactEmail.toLowerCase()}</a>.</p>
+            <div className="faq-grid faq-grid--accordion">
+              <details className="faq-item">
+                <summary>What makes Strive&apos;s programme different?</summary>
+                <p>Strive was founded by a Stanford University alumnus, and our curriculum takes an inquiry-first approach to coding education. We weave mathematical reasoning into the coding CCA, which makes lessons richer academically. Lessons are self-guided and blend creative visual projects with analytical thinking.</p>
+              </details>
+              <details className="faq-item">
+                <summary>How long is the programme, and can it suit different levels?</summary>
+                <p>The curriculum runs across two semesters. Because most of each lesson is self-paced, we can welcome both new and returning students in the same classroom — everyone works at their own level.</p>
+              </details>
+              <details className="faq-item">
+                <summary>Do students need any prior coding experience?</summary>
+                <p>No prior experience is needed. Our programmes are designed for students starting from zero, and the self-paced format lets each student progress at a comfortable pace.</p>
+              </details>
+              <details className="faq-item">
+                <summary>What equipment do students need?</summary>
+                <p>Students can access their course from any laptop, and we can provide laptops for those who don&apos;t have their own. iPads will work, but they aren&apos;t ideal for coding, so we recommend a laptop where possible.</p>
+              </details>
+              <details className="faq-item">
+                <summary>What platform do students use?</summary>
+                <p>Students learn on Strive&apos;s own coding and math platform — the same one used in our private 1-on-1 sessions. It runs in the browser, so students can pick up where they left off from any laptop.</p>
+              </details>
+              <details className="faq-item">
+                <summary>What will students have to show for it?</summary>
+                <p>In every lesson, students complete a project that&apos;s added to their personal portfolio. By the end of the term, parents have a full portfolio of their child&apos;s work — <a href="https://www.strivemath.com/portfolio/recuK6CPwtgTnWTf9" target="_blank" rel="noopener noreferrer">see an example portfolio here</a>.</p>
+              </details>
+              <details className="faq-item">
+                <summary>Which days can classes run?</summary>
+                <p>We&apos;re flexible and can run sessions on any weekday to fit your school&apos;s timetable.</p>
+              </details>
+              <details className="faq-item">
+                <summary>Are your teachers vetted for child safety?</summary>
+                <p>Yes. All our teachers complete child safeguarding training through <a href="https://childsafeguarding.com/" target="_blank" rel="noopener noreferrer">childsafeguarding.com</a>. If your school requires a specific safeguarding provider or certification, just let us know and we&apos;ll arrange it.</p>
+              </details>
+            </div>
+          </div>
+        </section>
+
         {/* CTA */}
         <section className="cta-section">
           <h2>Bring a coding or math CCA to your school</h2>
