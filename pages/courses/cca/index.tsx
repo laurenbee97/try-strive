@@ -52,10 +52,6 @@ export default function CCAIndex() {
               <span className="hero-stat-value">Ages 8–16</span>
               <span className="hero-stat-label">Students served</span>
             </div>
-            <div className="hero-stat">
-              <span className="hero-stat-value">6</span>
-              <span className="hero-stat-label">Course types available</span>
-            </div>
           </div>
         </header>
         <hr className="rainbow-rule" />
