@@ -2,8 +2,36 @@ import { useState, useRef } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import Nav from '@/components/Nav'
+import FaqSection from '@/components/FaqSection'
 
 const trialUrl = 'https://www.strivemath.com/?show_form=true&plan=navbar'
+
+const faqs = [
+  {
+    question: 'Does my child need to know how to code already?',
+    answer: "We strongly recommend completing Strive's coding fundamentals track (Units 1 to 7) before starting AI Coding. Students with equivalent experience from other courses can join directly. If you're unsure, book a trial class and we'll assess their level together.",
+  },
+  {
+    question: 'What age group is this course for?',
+    answer: 'Students aged 10 to 16. Classes are online, so your child can join from anywhere in the world. We have a strong community of students in Singapore.',
+  },
+  {
+    question: 'How are classes structured?',
+    answer: "All classes are 1-on-1 with a Strive teacher. Each class is one hour. The teacher adjusts the pace to your child. There's no class to keep up with.",
+  },
+  {
+    question: 'What does my child actually end up with?',
+    answer: 'A live, deployed web application they built themselves, with user accounts, a real database, and payment integration. They also receive a Strive certificate they can attach to school or university applications.',
+  },
+  {
+    question: 'How is this different from other coding courses for kids?',
+    answer: "Most coding courses for kids use simplified tools and stop at writing code. Strive's AI Coding course uses the same tools professional developers use (Next.js, React, GitHub, Vercel, real AI coding assistants) and covers the challenges that go beyond code: architecture decisions, security, debugging, and product thinking. Those tools also get updated as better ones emerge, so students are always working with what's current.",
+  },
+  {
+    question: 'Can my child add this to their university application?',
+    answer: 'Yes. The certificate and the deployed project are both designed for this purpose. A working web application with real users is a stronger portfolio piece than most students applying to university can show.',
+  },
+]
 
 const stories = [
   {
@@ -77,8 +105,7 @@ export default function AiFirstCoding() {
       <Head>
         <title>AI Coding for Kids | Strive Math</title>
         <meta name="description" content="Build real apps with professional AI tools. Strive's advanced AI coding course for students aged 10–16. 1-on-1, live, online. Deploy a full-stack product by the end." />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      </Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />      </Head>
 
       <Nav />
 
@@ -453,38 +480,7 @@ export default function AiFirstCoding() {
         </section>
 
         {/* FAQ */}
-        <section style={{ background: 'white' }}>
-          <div className="section-inner">
-            <span className="section-tag">Common questions</span>
-            <h2 className="section-title">Frequently asked questions</h2>
-            <div className="faq-grid">
-              <article className="faq-item">
-                <h3>Does my child need to know how to code already?</h3>
-                <p>We strongly recommend completing Strive&apos;s coding fundamentals track (Units 1 to 7) before starting AI Coding. Students with equivalent experience from other courses can join directly. If you&apos;re unsure, book a trial class and we&apos;ll assess their level together.</p>
-              </article>
-              <article className="faq-item">
-                <h3>What age group is this course for?</h3>
-                <p>Students aged 10 to 16. Classes are online, so your child can join from anywhere in the world. We have a strong community of students in Singapore.</p>
-              </article>
-              <article className="faq-item">
-                <h3>How are classes structured?</h3>
-                <p>All classes are 1-on-1 with a Strive teacher. Each class is one hour. The teacher adjusts the pace to your child. There&apos;s no class to keep up with.</p>
-              </article>
-              <article className="faq-item">
-                <h3>What does my child actually end up with?</h3>
-                <p>A live, deployed web application they built themselves, with user accounts, a real database, and payment integration. They also receive a Strive certificate they can attach to school or university applications.</p>
-              </article>
-              <article className="faq-item">
-                <h3>How is this different from other coding courses for kids?</h3>
-                <p>Most coding courses for kids use simplified tools and stop at writing code. Strive&apos;s AI Coding course uses the same tools professional developers use (Next.js, React, GitHub, Vercel, real AI coding assistants) and covers the challenges that go beyond code: architecture decisions, security, debugging, and product thinking. Those tools also get updated as better ones emerge, so students are always working with what&apos;s current.</p>
-              </article>
-              <article className="faq-item">
-                <h3>Can my child add this to their university application?</h3>
-                <p>Yes. The certificate and the deployed project are both designed for this purpose. A working web application with real users is a stronger portfolio piece than most students applying to university can show.</p>
-              </article>
-            </div>
-          </div>
-        </section>
+        <FaqSection faqs={faqs} />
 
         {/* TESTIMONIALS */}
         <section style={{ background: 'var(--bg-purple-tint)' }}>

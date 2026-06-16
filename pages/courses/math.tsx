@@ -1,8 +1,36 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import Nav from '@/components/Nav'
+import FaqSection from '@/components/FaqSection'
 
 const trialUrl = 'https://calendly.com/strive-trial-class/try-a-math-class'
+
+const faqs = [
+  {
+    question: 'What grades do you teach?',
+    answer: "We primarily teach grades 4 to 9, but we work with younger students who are ready for it and older students who need to consolidate foundations. If you're unsure, book a trial and we'll assess where your child is.",
+  },
+  {
+    question: "Do you follow my child's school curriculum?",
+    answer: "Yes. We align content to what your child's school actually teaches. We work with students at UWCSEA, SAS, Dover Court, and other international schools in Singapore, and we know their curricula well.",
+  },
+  {
+    question: 'How does the teacher matching work?',
+    answer: "We match based on your child's level, goals, and personality. It's not random. If the first match isn't right, we find another — at no cost to you.",
+  },
+  {
+    question: "My child doesn't need tutoring. Can you still challenge them?",
+    answer: "Absolutely. A lot of our students are doing fine at school and bored. We work well above the school syllabus for kids who need it — Singapore Math methods, olympiad-style problems, competition prep.",
+  },
+  {
+    question: 'How do I know if it\'s working?',
+    answer: 'You get a detailed report after each session, mapped to specific learning outcomes. You can see exactly what your child understands, what they\'re working on, and where they still have gaps.',
+  },
+  {
+    question: 'What happens if we want to cancel?',
+    answer: "Both plans auto-renew monthly and you can cancel at any time. There's no lock-in contract. We'd rather earn your child's continued attendance than hold you to one.",
+  },
+]
 
 export default function MathClasses() {
   return (
@@ -10,8 +38,7 @@ export default function MathClasses() {
       <Head>
         <title>1-on-1 Math Classes for Kids in Singapore — Strive</title>
         <meta name="description" content="Live, 1-on-1 math tutoring for students in grades 4–9. Curriculum-aligned, fully online, SGD 80/hr. Serving UWCSEA, SAS, Dover Court and more." />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      </Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />      </Head>
 
       <Nav />
 
@@ -366,38 +393,7 @@ export default function MathClasses() {
         </section>
 
         {/* FAQ */}
-        <section style={{ background: 'white' }}>
-          <div className="section-inner">
-            <span className="section-tag">Common questions</span>
-            <h2 className="section-title">Frequently asked questions</h2>
-            <div className="faq-grid">
-              <article className="faq-item">
-                <h3>What grades do you teach?</h3>
-                <p>We primarily teach grades 4 to 9, but we work with younger students who are ready for it and older students who need to consolidate foundations. If you&apos;re unsure, book a trial and we&apos;ll assess where your child is.</p>
-              </article>
-              <article className="faq-item">
-                <h3>Do you follow my child&apos;s school curriculum?</h3>
-                <p>Yes. We align content to what your child&apos;s school actually teaches. We work with students at UWCSEA, SAS, Dover Court, and other international schools in Singapore, and we know their curricula well.</p>
-              </article>
-              <article className="faq-item">
-                <h3>How does the teacher matching work?</h3>
-                <p>We match based on your child&apos;s level, goals, and personality. It&apos;s not random. If the first match isn&apos;t right, we find another — at no cost to you.</p>
-              </article>
-              <article className="faq-item">
-                <h3>My child doesn&apos;t need tutoring. Can you still challenge them?</h3>
-                <p>Absolutely. A lot of our students are doing fine at school and bored. We work well above the school syllabus for kids who need it — Singapore Math methods, olympiad-style problems, competition prep.</p>
-              </article>
-              <article className="faq-item">
-                <h3>How do I know if it&apos;s working?</h3>
-                <p>You get a detailed report after each session, mapped to specific learning outcomes. You can see exactly what your child understands, what they&apos;re working on, and where they still have gaps.</p>
-              </article>
-              <article className="faq-item">
-                <h3>What happens if we want to cancel?</h3>
-                <p>Both plans auto-renew monthly and you can cancel at any time. There&apos;s no lock-in contract. We&apos;d rather earn your child&apos;s continued attendance than hold you to one.</p>
-              </article>
-            </div>
-          </div>
-        </section>
+        <FaqSection faqs={faqs} />
 
         {/* TESTIMONIALS */}
         <section style={{ background: 'var(--bg-purple-tint)' }}>
