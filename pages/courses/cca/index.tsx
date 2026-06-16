@@ -59,12 +59,12 @@ export default function CCAIndex() {
   return (
     <>
       <Head>
-        <title>STEM CCA for International Schools in Singapore — Strive</title>
-        <meta name="description" content="Weekly Python coding and math CCA programmes for international schools in Singapore. Ages 8–16. Strive supplies the teacher, curriculum, and laptops — zero setup for your school." />
+        <title>STEM CCA for International Schools — Strive Math</title>
+        <meta name="description" content="Weekly coding and math CCA programmes for international schools in Singapore. Strive supplies the teacher, curriculum, and platform." />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="STEM CCA for International Schools in Singapore — Strive" />
-        <meta property="og:description" content="Weekly Python coding and math CCA programmes for international schools in Singapore. Ages 8–16. Strive supplies the teacher, curriculum, and laptops." />      </Head>
+        <meta property="og:title" content="STEM CCA for International Schools — Strive Math" />
+        <meta property="og:description" content="Weekly coding and math CCA programmes for international schools in Singapore. Strive supplies the teacher, curriculum, and platform." />      </Head>
 
       <Nav />
 
