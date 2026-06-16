@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import Nav from '@/components/Nav'
+import FaqSection from '@/components/FaqSection'
 
 const trialUrl = 'https://www.strivemath.com/?show_form=true&plan=navbar'
 
@@ -27,31 +28,13 @@ const faqs = [
   },
 ]
 
-const faqJsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: faqs.map(faq => ({
-    '@type': 'Question',
-    name: faq.question,
-    acceptedAnswer: {
-      '@type': 'Answer',
-      text: faq.answer,
-    },
-  })),
-}
-
 export default function HolidayCamps() {
   return (
     <>
       <Head>
         <title>Holiday Bootcamps for Kids — Strive</title>
         <meta name="description" content="8-class holiday bootcamps in Math and Coding for students aged 8–16. 1-on-1 online sessions, flexible scheduling, and a completion certificate." />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-        />
-      </Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />      </Head>
 
       <Nav />
 
@@ -254,32 +237,7 @@ export default function HolidayCamps() {
         </section>
 
         {/* FAQ */}
-        <section style={{ background: 'white' }} itemScope itemType="https://schema.org/FAQPage">
-          <div className="section-inner">
-            <span className="section-tag">Common questions</span>
-            <h2 className="section-title">Frequently asked questions</h2>
-            <div className="faq-grid">
-              {faqs.map((faq, i) => (
-                <article
-                  key={i}
-                  className="faq-item"
-                  itemScope
-                  itemType="https://schema.org/Question"
-                  itemProp="mainEntity"
-                >
-                  <h3 itemProp="name">{faq.question}</h3>
-                  <div
-                    itemScope
-                    itemType="https://schema.org/Answer"
-                    itemProp="acceptedAnswer"
-                  >
-                    <p itemProp="text">{faq.answer}</p>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection faqs={faqs} />
 
         {/* CTA */}
         <section className="cta-section">
