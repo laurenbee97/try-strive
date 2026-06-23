@@ -73,7 +73,7 @@ export default function CCAIndex() {
           </div>
           <div className="center mt28">
             {/* Update href once the PDF is added to /public, e.g. /strive-cca-information-pack.pdf */}
-            <a href="/strive-cca-information-pack.pdf" download className="btn btn-primary"><i className="ti ti-download"></i> Download our CCA Information Pack</a>
+            <a href="/images/cca/strive-cca-information-pack.pdf" download className="btn btn-primary"><i className="ti ti-download"></i> Download our CCA Information Pack</a>
           </div>
         </section>
 
