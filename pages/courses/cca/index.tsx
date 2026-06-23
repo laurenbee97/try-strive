@@ -1,317 +1,156 @@
 import Head from 'next/head'
 import Nav from '@/components/Nav'
-import FaqSection from '@/components/FaqSection'
 
 const contactEmail = 'CCA@strivemath.com'
-
-const faqs = [
-  {
-    question: "What makes Strive's programme different?",
-    answer: "Strive was founded by a Stanford University alumnus, and our curriculum takes an inquiry-first approach to coding education. We weave mathematical reasoning into the coding CCA, which makes lessons richer academically. Lessons are self-guided and blend creative visual projects with analytical thinking.",
-  },
-  {
-    question: "How long is the programme, and can it suit different levels?",
-    answer: "The curriculum runs across two semesters. Because most of each lesson is self-paced, we can welcome both new and returning students in the same classroom — everyone works at their own level.",
-  },
-  {
-    question: "Do students need any prior coding experience?",
-    answer: "No prior experience is needed. Our programmes are designed for students starting from zero, and the self-paced format lets each student progress at a comfortable pace.",
-  },
-  {
-    question: "What equipment do students need?",
-    answer: "Students can access their course from any laptop, and we can provide laptops for those who don't have their own. iPads will work, but they aren't ideal for coding, so we recommend a laptop where possible.",
-  },
-  {
-    question: "What platform do students use?",
-    answer: "Students learn on Strive's own coding and math platform — the same one used in our private 1-on-1 sessions. It runs in the browser, so students can pick up where they left off from any laptop.",
-  },
-  {
-    question: "What will students have to show for it?",
-    answer: "In every lesson, students complete a project that's added to their personal portfolio. By the end of the term, parents have a full portfolio of their child's work — see an example portfolio here: strivemath.com/portfolio/recuK6CPwtgTnWTf9",
-    answerNode: <>In every lesson, students complete a project that&apos;s added to their personal portfolio. By the end of the term, parents have a full portfolio of their child&apos;s work — <a href="https://www.strivemath.com/portfolio/recuK6CPwtgTnWTf9" target="_blank" rel="noopener noreferrer">see an example portfolio here</a>.</>,
-  },
-  {
-    question: "Which days can classes run?",
-    answer: "We're flexible and can run sessions on any weekday to fit your school's timetable.",
-  },
-  {
-    question: "Are your teachers vetted for child safety?",
-    answer: "Yes. All our teachers complete child safeguarding training through childsafeguarding.com. If your school requires a specific safeguarding provider or certification, just let us know and we'll arrange it.",
-    answerNode: <>Yes. All our teachers complete child safeguarding training through <a href="https://childsafeguarding.com/" target="_blank" rel="noopener noreferrer">childsafeguarding.com</a>. If your school requires a specific safeguarding provider or certification, just let us know and we&apos;ll arrange it.</>,
-  },
-]
-
-const curriculum = [
-  { week: 1,  theme: 'Starting Our Coding Adventure',    learn: 'Discover the fun of making our own app.',                                              tech: 'Introduction to Python and basic algorithmic structures.' },
-  { week: 2,  theme: 'Making Art with Code',             learn: 'Learn to draw cool stuff on the computer.',                                            tech: 'Utilising graphics libraries for dynamic rendering and animations.' },
-  { week: 3,  theme: 'Finding Our Way on the Screen',    learn: 'Understand how to place our drawings.',                                                tech: 'Co-ordinate geometry and screen plotting.' },
-  { week: 4,  theme: 'Storing Our Secrets',              learn: 'Learn about "storage boxes" in coding and organise your code.',                        tech: 'Introduction to variables and data encapsulation.' },
-  { week: 5,  theme: 'Using Ready-Made Tools',           learn: 'Explore tools that coding gives us.',                                                  tech: "Exploration of Python's built-in functions and modules." },
-  { week: 6,  theme: 'Practice Makes Perfect!',          learn: 'Get better with fun coding exercises.',                                                tech: 'Consolidating knowledge through code optimisation and debugging.' },
-  { week: 7,  theme: 'Mixing and Matching Our Tools',    learn: 'Learn to combine our "storage boxes" and create new, fun results.',                    tech: 'Advanced variable operations and data structuring.' },
-  { week: 8,  theme: 'Making Choices in Code',           learn: 'Uncover how to make our app decide things.',                                           tech: 'Introduction to logical operations and flow control mechanisms.' },
-  { week: 9,  theme: 'What If? Making Code Decisions',   learn: 'Learn more about making decisions in your app and see it respond to different things.', tech: 'Conditional statements and if-else constructs.' },
-  { week: 10, theme: 'Smart Choices with Code',          learn: 'Dive deeper into smart decision-making.',                                              tech: 'Advanced logical algorithms and complex decision-making structures.' },
-  { week: 11, theme: 'Our Big Project',                  learn: 'Put everything we\'ve learned into one project.',                                      tech: 'Project management, algorithmic design, and code implementation.' },
-]
 
 export default function CCAIndex() {
   return (
     <>
       <Head>
-        <title>STEM CCA for International Schools — Strive Math</title>
-        <meta name="description" content="Weekly coding and math CCA programmes for international schools in Singapore. Strive supplies the teacher, curriculum, and platform." />
+        <title>Coding &amp; Math CCA for International Schools | Strive</title>
+        <meta name="description" content="Weekly coding and math CCA programmes for international schools in Singapore. Strive supplies the teacher, curriculum, laptops and platform." />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="STEM CCA for International Schools — Strive Math" />
-        <meta property="og:description" content="Weekly coding and math CCA programmes for international schools in Singapore. Strive supplies the teacher, curriculum, and platform." />      </Head>
+        <meta property="og:title" content="Coding &amp; Math CCA for International Schools | Strive" />
+        <meta property="og:description" content="Weekly coding and math CCA programmes for international schools in Singapore. Strive supplies the teacher, curriculum, laptops and platform." />
+      </Head>
 
       <Nav />
 
-      <main>
+      <main className="cca2">
         {/* HERO */}
-        <header className="hero">
-          <div className="hero-tag">ECA · CCA · ASA · International Schools · Singapore</div>
-          <h1>
-            STEM CCA<br />
-            <span className="gradient-text">for International Schools</span>
-          </h1>
-          <p className="hero-sub">
-            Weekly coding and math classes at your school. Strive supplies the teacher, curriculum, and platform.
-          </p>
-          <div className="hero-actions">
-            <a href={`mailto:${contactEmail}`} className="btn-primary">Get in Touch</a>
-            <a href="#courses" className="btn-outline-white">See Courses</a>
+        <section className="wrap cca-hero">
+          <div>
+            <p className="eyebrow">CCA · ECA · ASA · International Schools · Singapore</p>
+            <h1><span className="grad-text">Coding &amp; Math CCA</span><br />for International Schools</h1>
+            <p className="lead">Weekly coding and math classes at your school. Strive supplies the teacher, curriculum, and platform.</p>
           </div>
-          <div className="hero-stats">
-            <div className="hero-stat">
-              <span className="hero-stat-value">11</span>
-              <span className="hero-stat-label">Schools running Strive programmes</span>
-            </div>
-            <div className="hero-stat">
-              <span className="hero-stat-value">Ages 8–16</span>
-              <span className="hero-stat-label">Students served</span>
-            </div>
-          </div>
-        </header>
-        <hr className="rainbow-rule" />
-
-        {/* WHAT IS IT */}
-        <section style={{ background: 'var(--bg-subtle)' }}>
-          <div className="section-inner two-col">
-            <div>
-              <span className="section-tag">What is it?</span>
-              <h2 className="section-title">
-                In-person coding and math classes at your school.
-              </h2>
-              <p className="section-lead">
-                After-school enrichment coding and math programmes that run on-site as CCAs, ECAs, or ASAs. We supply the teacher, curriculum, and platform. Your school markets the programme and manages enrolment.
-              </p>
-            </div>
-            <aside className="highlight-box">
-              <p>Classes are <span className="em">group-based</span> and follow a structured curriculum suited to the age groups your school serves.</p>
-              <p>Students use our proprietary coding or math platform — the same one used in our private 1-on-1 sessions.</p>
-              <p style={{ marginBottom: 0, color: 'var(--primary)', fontSize: '16px' }}>
-                We currently run programmes at schools including Dover Court International School and Middleton International School.
-              </p>
-            </aside>
-          </div>
-        </section>
-
-        {/* PARTNER SCHOOLS */}
-        <section style={{ background: 'white' }}>
-          <div className="section-inner">
-            <span className="section-tag">Our partner schools</span>
-            <h2 className="section-title">Trusted by 11+ international schools</h2>
-            <p className="section-lead">
-              Including Nexus International School, Dover Court International School, North London Collegiate School, Swiss School, and Middleton International School, with programmes consistently reaching full enrolment.
-            </p>
-            <div className="cca-school-stats">
-              <div className="cca-school-stat">
-                <div className="cca-school-stat-value">Popular</div>
-                <div className="cca-school-stat-label">High sign-up rate at international schools like Dover Court, Middleton and other international schools</div>
-              </div>
-              <div className="cca-school-stat">
-                <div className="cca-school-stat-value">Competitions</div>
-                <div className="cca-school-stat-label">We host math and coding competitions with UWCSEA, ACS International &amp; more</div>
-              </div>
-              <div className="cca-school-stat">
-                <div className="cca-school-stat-value">Zero setup</div>
-                <div className="cca-school-stat-label">We bring the teacher, curriculum, and laptops</div>
-              </div>
-            </div>
+          {/* Replace with: <img src="/images/cca/tamir-student.jpg" alt="Strive teacher Tamir coding with a student on a laptop"/> */}
+          <div className="photo">
+            <i className="ti ti-photo"></i>
+            <span>Photo: Tamir + student on laptop</span>
           </div>
         </section>
 
         {/* COURSES */}
-        <section id="courses" style={{ background: 'var(--bg-subtle)' }}>
-          <div className="section-inner">
-            <span className="section-tag">Courses</span>
-            <h2 className="section-title">Three courses, each customisable<br />for your school&apos;s needs</h2>
-            <p className="section-lead">Each course can be tailored to the age groups and interests of your students. No prior experience required.</p>
-            <div className="cca-courses-grid">
-              <div className="cca-course-card cca-course-featured">
-                <div className="cca-course-icon">🤖</div>
-                <span className="cca-popular-badge">★ Most Popular</span>
+        <section className="wrap section" id="courses">
+          <div className="section-head">
+            <p className="eyebrow">Our courses</p>
+            <h2>Three programmes, tailored to your students</h2>
+          </div>
+          <div className="courses">
+            <div className="course-card popular">
+              {/* Replace with: <img src="/images/cca/coding-class.jpg" alt="Students in a Strive coding class"/> */}
+              <div className="photo"><span className="pop-tag">Most popular</span><i className="ti ti-photo"></i><span>Coding class photo</span></div>
+              <div className="course-body">
                 <h3>Coding Fundamentals</h3>
-                <p>Build real apps and projects using Python to build foundational skills for AI-Coding.</p>
+                <p className="desc">Build real apps and projects in Python.</p>
+                <div className="course-meta"><i className="ti ti-clock"></i> 1 hour</div>
+                <div className="course-meta"><i className="ti ti-calendar"></i> 11 weeks</div>
+                <div className="course-meta"><i className="ti ti-mood-smile"></i> Ages 8&ndash;16</div>
+                <div className="course-meta"><i className="ti ti-coin"></i> S$30&ndash;35 per student, per hour</div>
               </div>
-              <div className="cca-course-card">
-                <div className="cca-course-icon">🎮</div>
+            </div>
+            <div className="course-card">
+              {/* Replace with: <img src="/images/cca/game-dev-class.jpg" alt="Students building a game in a Strive class"/> */}
+              <div className="photo"><i className="ti ti-photo"></i><span>Game dev photo</span></div>
+              <div className="course-body">
                 <h3>Game Development</h3>
-                <p>Design and build playable games from scratch.</p>
+                <p className="desc">Design and build playable games from scratch.</p>
+                <div className="course-meta"><i className="ti ti-clock"></i> 1 hour</div>
+                <div className="course-meta"><i className="ti ti-calendar"></i> 11 weeks</div>
+                <div className="course-meta"><i className="ti ti-mood-smile"></i> Ages 8&ndash;16</div>
+                <div className="course-meta"><i className="ti ti-coin"></i> S$30&ndash;35 per student, per hour</div>
               </div>
-              <div className="cca-course-card">
-                <div className="cca-course-icon">📏</div>
+            </div>
+            <div className="course-card">
+              {/* Replace with: <img src="/images/cca/math-class.jpg" alt="Students in a Strive math class"/> */}
+              <div className="photo"><i className="ti ti-photo"></i><span>Math class photo</span></div>
+              <div className="course-body">
                 <h3>Mathematics</h3>
-                <p>Strengthen school maths with weekly sessions on curriculum topics, problem-solving strategies, and competition techniques.</p>
+                <p className="desc">Strengthen school maths and competition skills.</p>
+                <div className="course-meta"><i className="ti ti-clock"></i> 1 hour</div>
+                <div className="course-meta"><i className="ti ti-calendar"></i> 11 weeks</div>
+                <div className="course-meta"><i className="ti ti-mood-smile"></i> Ages 8&ndash;16</div>
+                <div className="course-meta"><i className="ti ti-coin"></i> S$30&ndash;35 per student, per hour</div>
               </div>
             </div>
           </div>
-        </section>
-
-        {/* CURRICULUM */}
-        <section style={{ background: 'white' }}>
-          <div className="section-inner">
-            <span className="section-tag">Sample curriculum</span>
-            <h2 className="section-title">An 11-week structured programme</h2>
-            <p className="section-lead">Every course follows a clear week-by-week structure, building from fundamentals to a final student project.</p>
-            <div className="table-wrap" style={{ marginTop: '40px' }}>
-              <table>
-                <thead>
-                  <tr>
-                    <th style={{ width: '70px' }}>Week</th>
-                    <th>Theme</th>
-                    <th>What Students Learn</th>
-                    <th>Technical Mastery</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {curriculum.map(({ week, theme, learn, tech }) => (
-                    <tr key={week}>
-                      <td style={{ textAlign: 'center', fontWeight: 700, color: 'var(--accent-purple)' }}>W{week}</td>
-                      <td style={{ fontWeight: 600 }}>{theme}</td>
-                      <td>{learn}</td>
-                      <td style={{ fontSize: '13px', color: 'var(--text-muted)' }}>{tech}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
+          <div className="center mt28">
+            {/* Update href once the PDF is added to /public, e.g. /strive-cca-information-pack.pdf */}
+            <a href="/strive-cca-information-pack.pdf" download className="btn btn-primary"><i className="ti ti-download"></i> Download our CCA Information Pack</a>
           </div>
         </section>
 
-        {/* OUTCOMES */}
-        <section style={{ background: 'var(--bg-purple-tint)' }}>
-          <div className="section-inner">
-            <span className="section-tag">Tangible outcomes</span>
-            <h2 className="section-title">Every student leaves with something real</h2>
-            <p className="section-lead">Students build a portfolio of work and earn a certificate — useful for university applications and beyond.</p>
-            <div className="platform-grid" style={{ marginTop: '40px' }}>
-              <article className="platform-card">
-                <div className="platform-icon">🎓</div>
-                <h3>Course Completion Certificate</h3>
-                <p>Every student who completes the programme receives a personalised Strive certificate, signed by our teaching team.</p>
-              </article>
-              <article className="platform-card">
-                <div className="platform-icon">💼</div>
-                <h3>University-Ready Coding Portfolio</h3>
-                <p>Students build a portfolio of real projects on our platform — visual, shareable, and valuable for university applications.</p>
-              </article>
-              <article className="platform-card">
-                <div className="platform-icon">🏆</div>
-                <h3>Competitions</h3>
-                <p>Students can enter our inter-school math and coding competitions, with participation from UWCSEA East, ACS International, and more.</p>
-              </article>
+        {/* TRUST */}
+        <section className="wrap section" id="trust">
+          <div className="trust">
+            <div className="section-head">
+              <h2>Why 14+ international schools trust us</h2>
             </div>
-          </div>
-        </section>
-
-        {/* LOGISTICS */}
-        <section style={{ background: 'white' }}>
-          <div className="section-inner">
-            <span className="section-tag">Logistics</span>
-            <h2 className="section-title">Simple to set up, easy to run</h2>
-            <p className="section-lead">We handle the hard parts. Your school markets the programme to families and manages sign-ups.</p>
-            <div className="platform-grid" style={{ marginTop: '40px', gridTemplateColumns: 'repeat(2, 1fr)' }}>
-              <article className="platform-card">
-                <div className="platform-icon">📅</div>
-                <h3>Once a week, after school</h3>
-                <p>Weekly sessions hosted at your school. Day and time are flexible to fit your timetable.</p>
-              </article>
-              <article className="platform-card">
-                <div className="platform-icon">💻</div>
-                <h3>Laptops provided</h3>
-                <p>No equipment needed. We bring everything required for students to code from day one.</p>
-              </article>
-              <article className="platform-card">
-                <div className="platform-icon">👩‍🏫</div>
-                <h3>8–16 students per teacher</h3>
-                <p>Small group sizes ensure every student gets attention and no one gets left behind.</p>
-              </article>
-              <article className="platform-card">
-                <div className="platform-icon">💰</div>
-                <h3>Priced per student per hour</h3>
-                <p>Pricing is agreed directly with each school based on group size and session frequency.</p>
-              </article>
+            <div className="proof">
+              {/* Replace with: <img src="/images/cca/portfolio.jpg" alt="A student's Strive coding portfolio"/> */}
+              <div className="photo"><i className="ti ti-photo"></i><span>Student portfolio</span></div>
+              {/* Replace with: <img src="/images/cca/certificate.jpg" alt="Strive course completion certificate"/> */}
+              <div className="photo"><i className="ti ti-photo"></i><span>Certificate</span></div>
+              {/* Replace with: <img src="/images/cca/uwc-competition.jpg" alt="Students at the UWC math competition"/> */}
+              <div className="photo"><i className="ti ti-photo"></i><span>UWC math competition</span></div>
             </div>
-          </div>
-        </section>
-
-        {/* WHY STRIVE */}
-        <section style={{ background: 'var(--bg-subtle)' }}>
-          <div className="section-inner two-col">
-            <div>
-              <span className="section-tag">Why Strive</span>
-              <h2 className="section-title">
-                Our own curriculum<br />
-                and platform.
-              </h2>
-              <p className="section-lead">
-                We bring the same philosophy to in-school programmes that we apply online: students build real, visual projects rather than following a generic workbook.
-              </p>
+            <div className="badges">
+              <span className="badge"><i className="ti ti-shield-check"></i> Child-safety certified teachers</span>
+              <span className="badge"><i className="ti ti-device-laptop"></i> Laptops &amp; setup included</span>
+              <span className="badge"><i className="ti ti-certificate"></i> Certificate + portfolio</span>
+              <span className="badge"><i className="ti ti-trophy"></i> Host inter-school competitions</span>
             </div>
-            <aside className="highlight-box">
-              <p>The teaching platform is the <span className="em">same one used in private sessions</span> — built by Strive, not licensed from a third party.</p>
-              <p>Schools get a provider who has built their own curriculum and tools, not one reselling someone else&apos;s programme.</p>
-              <p style={{ marginBottom: 0, color: 'var(--primary)', fontSize: '16px' }}>
-                No prior coding experience needed. We design for students starting from zero.
-              </p>
-            </aside>
           </div>
         </section>
 
         {/* FAQ */}
-        <FaqSection
-          faqs={faqs}
-          variant="accordion"
-          tag="FAQ"
-          lead={
-            <>
-              Everything schools usually want to know about running a Strive CCA.
-              Don&apos;t see your question? Email us at{' '}
-              <a href={`mailto:${contactEmail}`}>{contactEmail.toLowerCase()}</a>.
-            </>
-          }
-        />
+        <section className="wrap section faq" id="faq">
+          <div className="section-head">
+            <p className="eyebrow">Good to know</p>
+            <h2>Frequently asked questions</h2>
+          </div>
 
-        {/* CTA */}
-        <section className="cta-section">
-          <h2>Bring a coding or math CCA to your school</h2>
-          <p>Reach out to discuss adding a Strive programme to your next CCA cycle.</p>
-          <a href={`mailto:${contactEmail}`} className="btn-primary" style={{ fontSize: '18px', padding: '18px 44px' }}>
-            Contact Us
-          </a>
-          <p className="cta-note">For international schools in Singapore · Ages 8–16 · Laptops provided · No setup required</p>
+          <details>
+            <summary>How much does it cost? <i className="ti ti-chevron-down"></i></summary>
+            <div className="answer">Every school is different, so we work with you directly to find a structure and price that fits your students, typically in the range of S$30&ndash;35 per student per hour, depending on group size, session length and frequency.</div>
+          </details>
+          <details>
+            <summary>Are your teachers vetted for child safety? <i className="ti ti-chevron-down"></i></summary>
+            <div className="answer">Yes. All our teachers complete child safeguarding training through childsafeguarding.com. If your school requires a specific safeguarding provider or certification, just let us know and we&rsquo;ll arrange it.</div>
+          </details>
+          <details>
+            <summary>Do students need any prior experience? <i className="ti ti-chevron-down"></i></summary>
+            <div className="answer">No prior experience is needed. Our programmes are designed for students starting from zero, and the self-paced format lets each student progress at a comfortable level, so new and returning students can share the same classroom.</div>
+          </details>
+          <details>
+            <summary>What equipment do students need? <i className="ti ti-chevron-down"></i></summary>
+            <div className="answer">Nothing. We bring everything required, including laptops. Students can also use their own laptop if they prefer; the platform runs in any browser.</div>
+          </details>
+          <details>
+            <summary>What platform do students use? <i className="ti ti-chevron-down"></i></summary>
+            <div className="answer">Students learn on Strive&rsquo;s own coding and math platform, the same one used in our private 1-on-1 sessions, built by us rather than licensed from a third party.</div>
+          </details>
+          <details>
+            <summary>What will students have to show for it? <i className="ti ti-chevron-down"></i></summary>
+            <div className="answer">Every student builds a portfolio of real projects and earns a personalised Strive certificate on completion, useful for university applications and beyond.</div>
+          </details>
+        </section>
+
+        {/* FINAL CTA */}
+        <section className="wrap section">
+          <div className="cta">
+            <h2>Bring a Strive CCA to your school</h2>
+            <p>Reach out to discuss adding a coding or math programme to your next CCA cycle.</p>
+            <a href={`mailto:${contactEmail}?subject=Strive%20CCA%20sign-up`} className="btn btn-primary">Sign up</a>
+          </div>
         </section>
       </main>
 
-      <footer>
-        <div className="footer-inner">
-          <p className="footer-logo">Strive<span>.</span></p>
-          <p>Coding and math CCA programmes for international schools in Singapore.</p>
-          <p>We also offer 1-on-1 online tutoring in Mathematics, Coding and AI Coding.</p>
-        </div>
+      <footer className="cca2-footer">
+        For international schools in Singapore · Ages 8&ndash;16 · Laptops provided · No setup required<br />
+        &copy; Strive · {contactEmail.toLowerCase()}
       </footer>
     </>
   )
