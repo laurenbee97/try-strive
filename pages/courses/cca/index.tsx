@@ -10,6 +10,9 @@ export default function CCAIndex() {
         <title>Coding &amp; Math CCA for International Schools | Strive</title>
         <meta name="description" content="Weekly coding and math CCA programmes for international schools in Singapore. Strive supplies the teacher, curriculum, laptops and platform." />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Coding &amp; Math CCA for International Schools | Strive" />
+        <meta property="og:description" content="Weekly coding and math CCA programmes for international schools in Singapore. Strive supplies the teacher, curriculum, laptops and platform." />
       </Head>
 
       <Nav />
