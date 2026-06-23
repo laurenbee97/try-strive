@@ -2181,3 +2181,114 @@ footer p {
   .blog-post-card { padding: 24px; }
   .blog-card-cover { margin: -24px -24px 20px; width: calc(100% + 48px); }
 }
+
+/* ============================================================
+   CCA page — redesigned layout (scoped under .cca2)
+   Self-contained styles; design tokens namespaced to avoid
+   collisions with the global :root tokens above.
+   ============================================================ */
+.cca2 {
+  --navy: #0F1574;
+  --navy-light: #878AB9;
+  --c-text: #575863;
+  --c-muted: #B1B1C2;
+  --c-purple: #7058FF;
+  --c-pink: #FF4F84;
+  --c-orange: #FFA41C;
+  --c-green: #B0EB33;
+  --c-blue: #2C81ED;
+  --tint: #f1eeff;
+  --c-bg: #f3f3f8;
+  --c-white: #fff;
+  --grad: linear-gradient(to right, #FFA41C, #FF4F84, #7058FF);
+  --grad-hover: linear-gradient(to right, #FFA41C, #FF4F84, #7058FF, #2C81ED, #B0EB33);
+  --c-shadow: 0px 8px 30.26px rgba(15, 21, 116, 0.07);
+  --c-shadow-lg: 0px 15px 30px rgba(0, 0, 0, 0.10);
+  display: block;
+  font-family: 'Roboto', sans-serif;
+  background: var(--c-bg);
+  color: var(--c-text);
+  line-height: 1.6;
+}
+.cca2 *, .cca2 *::before, .cca2 *::after { box-sizing: border-box; }
+.cca2 h1, .cca2 h2, .cca2 h3, .cca2 h4, .cca2 .btn, .cca2 .eyebrow { font-family: 'Jost', sans-serif; }
+.cca2 h1 { font-size: 42px; font-weight: 700; color: var(--navy); line-height: 1.1; letter-spacing: -0.5px; }
+.cca2 h2 { font-size: 30px; font-weight: 700; color: var(--navy); line-height: 1.2; }
+.cca2 h3 { font-size: 18px; font-weight: 600; color: var(--navy); }
+.cca2 a { color: var(--c-purple); text-decoration: none; }
+.cca2 .wrap { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+.cca2 .eyebrow { font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--c-purple); }
+.cca2 .grad-text { background: var(--grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; }
+
+/* Buttons */
+.cca2 .btn { display: inline-block; padding: 14px 30px; font-weight: 600; font-size: 16px; border: none; cursor: pointer; border-radius: 100px; transition: 200ms; text-align: center; }
+.cca2 .btn-primary { background: var(--grad); color: #fff; box-shadow: 0px 4px 11px rgba(112, 88, 255, 0.25); }
+.cca2 .btn-primary:hover { background: var(--grad-hover); color: #fff; }
+.cca2 .btn-outline { background: transparent; color: var(--c-purple); border: 2px solid var(--c-purple); }
+.cca2 .btn-outline:hover { background: var(--tint); }
+.cca2 .btn-sm { padding: 10px 22px; font-size: 15px; }
+
+/* Hero (renamed from .hero to avoid the site-wide navy .hero background/overlay) */
+.cca2 .cca-hero { display: grid; grid-template-columns: 1.25fr 1fr; gap: 40px; align-items: center; padding: 56px 0 40px; background: none; text-align: left; }
+.cca2 .cca-hero p.lead { font-size: 18px; margin: 16px 0 0; max-width: 90%; }
+.cca2 .cca-hero .photo { min-height: 240px; }
+
+/* Photo placeholders: replace each .photo div with <img src="..." alt="..."> */
+.cca2 .photo { background: var(--tint); border-radius: 24px; display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--c-purple); text-align: center; overflow: hidden; }
+.cca2 .photo i { font-size: 30px; opacity: .6; margin-bottom: 6px; }
+.cca2 .photo span { font-size: 13px; font-weight: 600; font-family: 'Jost', sans-serif; padding: 0 12px; }
+.cca2 .photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* Courses */
+.cca2 .section { padding: 44px 0; }
+.cca2 .section-head { text-align: center; margin-bottom: 32px; }
+.cca2 .courses { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 8px; }
+.cca2 .course-card { display: flex; flex-direction: column; align-items: stretch; justify-content: flex-start; gap: 0; padding: 0; background: var(--c-white); border: 1px solid #e9e9f2; border-radius: 16px; overflow: hidden; box-shadow: var(--c-shadow); transition: 200ms; }
+.cca2 .course-card:hover { box-shadow: var(--c-shadow-lg); transform: translateY(-3px); border-color: #e9e9f2; }
+.cca2 .course-card.popular:hover { border-color: var(--c-purple); }
+.cca2 .course-card.popular { border: 2px solid var(--c-purple); }
+.cca2 .course-card .photo { border-radius: 0; min-height: 150px; position: relative; }
+.cca2 .course-card .photo .pop-tag { position: absolute; top: 12px; left: 12px; margin: 0; z-index: 1; box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.18); }
+.cca2 .course-body { padding: 20px; }
+.cca2 .course-card h3 { font-size: 18px; color: var(--c-blue); margin-bottom: 6px; }
+.cca2 .course-card .desc { font-size: 14px; color: var(--c-text); line-height: 1.5; margin-bottom: 14px; }
+.cca2 .course-meta { display: flex; align-items: center; gap: 9px; font-size: 14px; color: var(--c-text); margin-bottom: 8px; }
+.cca2 .course-meta:last-child { margin-bottom: 0; }
+.cca2 .course-meta i { font-size: 17px; color: var(--navy-light); }
+.cca2 .pop-tag { display: inline-block; background: var(--grad); color: #fff; font-family: 'Jost', sans-serif; font-weight: 600; font-size: 11px; letter-spacing: 0.04em; text-transform: uppercase; padding: 3px 10px; border-radius: 100px; margin-bottom: 10px; }
+.cca2 .center { text-align: center; }
+.cca2 .mt28 { margin-top: 28px; }
+
+/* Trust */
+.cca2 .trust { background: var(--c-white); border-radius: 24px; padding: 40px 32px; box-shadow: var(--c-shadow); }
+.cca2 .proof { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin: 24px 0; }
+.cca2 .proof .photo { min-height: 170px; border-radius: 16px; }
+.cca2 .badges { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+.cca2 .badge { display: inline-flex; align-items: center; gap: 7px; background: var(--tint); color: var(--c-purple); font-family: 'Jost', sans-serif; font-weight: 600; font-size: 14px; padding: 8px 16px; border-radius: 100px; }
+.cca2 .badge i { font-size: 17px; }
+
+/* FAQ */
+.cca2 .faq details { background: var(--c-white); border-radius: 12px; box-shadow: var(--c-shadow); margin-bottom: 12px; overflow: hidden; }
+.cca2 .faq summary { list-style: none; cursor: pointer; padding: 18px 22px; font-family: 'Jost', sans-serif; font-weight: 600; font-size: 16px; color: var(--navy); display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.cca2 .faq summary::-webkit-details-marker { display: none; }
+.cca2 .faq summary i { transition: 200ms; color: var(--c-purple); }
+.cca2 .faq details[open] summary i { transform: rotate(180deg); }
+.cca2 .faq .answer { padding: 0 22px 20px; font-size: 15px; }
+.cca2 .pdf-link { display: inline-flex; align-items: center; gap: 8px; font-family: 'Jost', sans-serif; font-weight: 600; font-size: 15px; margin-top: 8px; }
+
+/* Final CTA */
+.cca2 .cta { background: linear-gradient(315deg, #134297 0%, #00266b 100%); border-radius: 32px; padding: 48px 32px; text-align: center; color: #fff; }
+.cca2 .cta h2 { color: #fff; }
+.cca2 .cta p { color: #cdd6f5; margin: 12px 0 24px; font-size: 17px; }
+
+/* Footer (CCA page) */
+.cca2-footer { text-align: center; font-size: 13px; color: #B1B1C2; padding: 36px 24px; font-family: 'Roboto', sans-serif; line-height: 1.6; background: #f3f3f8; }
+
+@media (max-width: 760px) {
+  .cca2 h1 { font-size: 32px; }
+  .cca2 h2 { font-size: 25px; }
+  .cca2 .cca-hero { grid-template-columns: 1fr; gap: 24px; padding: 36px 0 28px; }
+  .cca2 .cca-hero .photo { min-height: 200px; order: -1; }
+  .cca2 .courses { grid-template-columns: 1fr; }
+  .cca2 .proof { grid-template-columns: 1fr; }
+}
