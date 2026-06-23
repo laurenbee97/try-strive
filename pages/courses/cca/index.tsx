@@ -25,10 +25,8 @@ export default function CCAIndex() {
             <h1><span className="grad-text">Coding &amp; Math CCA</span><br />for International Schools</h1>
             <p className="lead">Weekly coding and math classes at your school. Strive supplies the teacher, curriculum, and platform.</p>
           </div>
-          {/* Replace with: <img src="/images/cca/tamir-student.jpg" alt="Strive teacher Tamir coding with a student on a laptop"/> */}
           <div className="photo">
-            <i className="ti ti-photo"></i>
-            <span>Photo: Tamir + student on laptop</span>
+            <img src="/images/cca/tamir-student.webp" alt="Strive teacher Tamir coding with a student on a laptop" />
           </div>
         </section>
 
@@ -40,8 +38,7 @@ export default function CCAIndex() {
           </div>
           <div className="courses">
             <div className="course-card popular">
-              {/* Replace with: <img src="/images/cca/coding-class.jpg" alt="Students in a Strive coding class"/> */}
-              <div className="photo"><span className="pop-tag">Most popular</span><i className="ti ti-photo"></i><span>Coding class photo</span></div>
+              <div className="photo"><span className="pop-tag">Most popular</span><img src="/images/cca/coding-class.webp" alt="Students in a Strive coding class" /></div>
               <div className="course-body">
                 <h3>Coding Fundamentals</h3>
                 <p className="desc">Build real apps and projects in Python.</p>
@@ -52,8 +49,7 @@ export default function CCAIndex() {
               </div>
             </div>
             <div className="course-card">
-              {/* Replace with: <img src="/images/cca/game-dev-class.jpg" alt="Students building a game in a Strive class"/> */}
-              <div className="photo"><i className="ti ti-photo"></i><span>Game dev photo</span></div>
+              <div className="photo"><img src="/images/cca/game-dev-class.webp" alt="Students building a game in a Strive class" /></div>
               <div className="course-body">
                 <h3>Game Development</h3>
                 <p className="desc">Design and build playable games from scratch.</p>
@@ -64,8 +60,7 @@ export default function CCAIndex() {
               </div>
             </div>
             <div className="course-card">
-              {/* Replace with: <img src="/images/cca/math-class.jpg" alt="Students in a Strive math class"/> */}
-              <div className="photo"><i className="ti ti-photo"></i><span>Math class photo</span></div>
+              <div className="photo"><img src="/images/cca/math-class.webp" alt="Students in a Strive math class" /></div>
               <div className="course-body">
                 <h3>Mathematics</h3>
                 <p className="desc">Strengthen school maths and competition skills.</p>
@@ -78,7 +73,7 @@ export default function CCAIndex() {
           </div>
           <div className="center mt28">
             {/* Update href once the PDF is added to /public, e.g. /strive-cca-information-pack.pdf */}
-            <a href="/strive-cca-information-pack.pdf" download className="btn btn-primary"><i className="ti ti-download"></i> Download our CCA Information Pack</a>
+            <a href="/images/cca/strive-cca-information-pack.pdf" download className="btn btn-primary"><i className="ti ti-download"></i> Download our CCA Information Pack</a>
           </div>
         </section>
 
@@ -89,12 +84,9 @@ export default function CCAIndex() {
               <h2>Why 14+ international schools trust us</h2>
             </div>
             <div className="proof">
-              {/* Replace with: <img src="/images/cca/portfolio.jpg" alt="A student's Strive coding portfolio"/> */}
-              <div className="photo"><i className="ti ti-photo"></i><span>Student portfolio</span></div>
-              {/* Replace with: <img src="/images/cca/certificate.jpg" alt="Strive course completion certificate"/> */}
-              <div className="photo"><i className="ti ti-photo"></i><span>Certificate</span></div>
-              {/* Replace with: <img src="/images/cca/uwc-competition.jpg" alt="Students at the UWC math competition"/> */}
-              <div className="photo"><i className="ti ti-photo"></i><span>UWC math competition</span></div>
+              <div className="photo"><img src="/images/cca/portfolio.webp" alt="A student's Strive coding portfolio" /></div>
+              <div className="photo"><img src="/images/cca/certificate.webp" alt="Strive course completion certificate" /></div>
+              <div className="photo"><img src="/images/cca/uwc-competition.webp" alt="Students at the UWC math competition" /></div>
             </div>
             <div className="badges">
               <span className="badge"><i className="ti ti-shield-check"></i> Child-safety certified teachers</span>
