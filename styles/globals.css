@@ -2242,6 +2242,10 @@ footer p {
 /* Courses */
 .cca2 .section { padding-top: 44px; padding-bottom: 44px; }
 .cca2 .section-head { text-align: center; margin-bottom: 32px; }
+.cca2 .about-strive { padding-top: 8px; padding-bottom: 28px; }
+.cca2 .about-card { background: var(--c-white); border: 1px solid #e9e9f2; border-radius: 24px; box-shadow: var(--c-shadow); padding: 34px 36px; }
+.cca2 .about-card h2 { max-width: 680px; margin: 8px 0 12px; }
+.cca2 .about-card p:last-child { max-width: 760px; margin: 0; font-size: 17px; line-height: 1.7; }
 .cca2 .courses { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 8px; }
 .cca2 .course-card { display: flex; flex-direction: column; align-items: stretch; justify-content: flex-start; gap: 0; padding: 0; background: var(--c-white); border: 1px solid #e9e9f2; border-radius: 16px; overflow: hidden; box-shadow: var(--c-shadow); transition: 200ms; }
 .cca2 .course-card:hover { box-shadow: var(--c-shadow-lg); transform: translateY(-3px); border-color: #e9e9f2; }
@@ -2289,6 +2293,9 @@ footer p {
   .cca2 h2 { font-size: 25px; }
   .cca2 .cca-hero { grid-template-columns: 1fr; gap: 24px; padding-top: 36px; padding-bottom: 28px; }
   .cca2 .cca-hero .photo { min-height: 200px; order: -1; }
+  .cca2 .about-strive { padding-top: 4px; }
+  .cca2 .about-card { padding: 28px 24px; border-radius: 20px; }
+  .cca2 .about-card p:last-child { font-size: 16px; }
   .cca2 .courses { grid-template-columns: 1fr; }
   .cca2 .proof { grid-template-columns: 1fr; }
 }
