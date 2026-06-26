@@ -30,6 +30,15 @@ export default function CCAIndex() {
           </div>
         </section>
 
+        {/* ABOUT */}
+        <section className="wrap section about-strive" id="about-strive">
+          <div className="about-card">
+            <p className="eyebrow">About Strive</p>
+            <h2>Built for schools that want meaningful STEM learning</h2>
+            <p>Strive Math is a Singapore-based coding and math education provider for students aged 8 to 16. Founded by Stanford alumnus and Forbes 30 Under 30 lister Pulkit Agarwal, Strive is backed by Y Combinator and builds its own learning platform to support engaging, project-based lessons. We partner with international schools to make STEM enrichment easy to run, with expert teachers, curriculum, classroom setup, and student progress handled by our team.</p>
+          </div>
+        </section>
+
         {/* COURSES */}
         <section className="wrap section" id="courses">
           <div className="section-head">
